@@ -1,0 +1,20 @@
+div.floating_sharing {
+    background-color: #E9E9E9;
+    position: fixed;
+	top: 30%;
+	z-index: 99999;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+div#floating_left_sharing {
+    left: 0;
+}
+div#floating_right_sharing {
+    right: 0;
+}
+
+div.floating_sharing .oas_btn {
+   	float: left;
+    clear: both;
+}

@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OneAll Social Sharing Icons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Wed Jan 27 2016 15:27:24 GMT+0100 (CET)\n"
+"PO-Revision-Date: Thu Jan 28 2016 17:02:11 GMT+0100 (CET)\n"
+"Last-Translator: admin <dzara@oneall.com>\n"
+"Language-Team: \n"
+"Language: French (France)\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: fr_FR\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:106
+msgid "Default Buttons"
+msgstr "Boutons par défaut"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:46
+#, php-format
+msgid ""
+"Feel free to <a target=\"_blank\" href=\"%s\">get in touch</a> if you have any "
+"questions"
+msgstr "N'hésitez pas à nous contacter pour toutes questions"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:60
+msgid "Get Started!"
+msgstr "Démarrez !"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:63
+#, php-format
+msgid ""
+"To be able to use this plugin you first of all need to create a free account "
+"at %s and setup a Site."
+msgstr ""
+"Pour utiliser le plugin vous devez créer un compte gratuit sur %S et "
+"configurer un site."
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:64
+msgid ""
+"After having created your account and setup your Site, please enter the Site "
+"settings in the form below."
+msgstr ""
+"Après avoir créé et configuré votre compte, saisissez les informations ci-"
+"dessous."
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:65
+msgid "Don't worry the setup takes only a couple of minutes!"
+msgstr "Pas d'inquiétude, l'installation ne dure que deux minutes !"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:68
+msgid "Click here to setup your free account"
+msgstr "Cliquez ici pour paramétrer votre compte gratuit"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:71
+#, php-format
+msgid "You are in good company! This plugin is used on more than %s websites!"
+msgstr ""
+"Vous êtes en très bonne compagnie ! Le plugin est utilisé par plus de %s "
+"sites !"
+
+#. Name of the plugin
+msgid "OneAll Social Sharing Icons"
+msgstr "OneAll Social Sharing Icons"
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+"Ceci est une description du plugin. Celui ci est présent dans la section "
+"admin de WordPress."
+
+#. Author of the plugin
+msgid "OneAll"
+msgstr "OneAll"
+
+#: ../admin/class-oa-social-sharing-icons-admin-widget.php:18
+msgid ""
+"Allow your visitors to share your website pages on their social networks "
+"like Twitter, Facebook, LinkedIn, Google and Yahoo."
+msgstr ""
+"Permettez à vos visiteurs de partager les pages de votre site sur différents "
+"réseaux sociaux tels que Twitter, Facebook, Linkedin, Google ou Yahoo."
+
+#: ../admin/class-oa-social-sharing-icons-admin-widget.php:48
+msgid "Share"
+msgstr "Partage"
+
+#: ../admin/class-oa-social-sharing-icons-admin-widget.php:56
+msgid "Title"
+msgstr "Titre"
+
+#: ../admin/class-oa-social-sharing-icons-admin-widget.php:60
+msgid "Size"
+msgstr "Taille"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:72
+msgid "Setup"
+msgstr "Installation"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:105
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:107
+msgid "Small Buttons"
+msgstr "Boutons petits"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:108
+msgid "Medium Buttons"
+msgstr "Bouton médium"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:109
+msgid "Large Buttons"
+msgstr "Boutons larges"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:110
+msgid "Horizontal Counters"
+msgstr "Compteur horizontal"
+
+#: ../admin/class-oa-social-sharing-icons-admin.php:111
+msgid "Vertical Counters"
+msgstr "Compteur vertical"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup-endform.php:5
+msgid "Save Changes"
+msgstr "Sauvegarder"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:42
+msgid "Help, Updates &amp; Documentation"
+msgstr "Aide, Mises à jour & Documentation"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:45
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Follow us on Twitter</a> to stay informed about "
+"updates"
+msgstr "Suivez nous sur Twitter pour être tenu au courant des nouveautés"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:47
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Contact us</a> if you have feedback or need "
+"assistance"
+msgstr "Contactez nous pour tout retours ou besoin d'assistance"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:48
+#, php-format
+msgid ""
+"Let your visitors comment, login and register with 30+ Social Networks with "
+"our <a target=\"_blank\" href=\"%s\">Social Login plugin</a>!"
+msgstr ""
+"Permettez à vos visiteur de commenter, s'identifier et s'enregistrer avec "
+"plus de 30 réseaux sociaux grâce à notre <a target=\"_blank\" href=\"%s\">plugin "
+"Social Login</a>!"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:83
+msgid "Your modifications have been saved successfully!"
+msgstr "Les modifications ont été sauvegardées!"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:93
+msgid ""
+"The subdomain showed is the one you used in the Social Login wordpress "
+"plugin. Please save this subdomain or enter a valid new one."
+msgstr ""
+"Le sous-domain est identique à celui utilisé dans le plugin Social Login. "
+"Sauvegarder le ou saisissez un autre sous domaine valide."
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:103
+msgid "You specified a different subdomain in social login plugin. Is it correct ?"
+msgstr ""
+"Le domaine spécifié est différent de celui spécifié dans le plugin Social "
+"Login. Est-ce correct ?"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:111
+msgid "Enter your API Settings"
+msgstr "Saisissez vos paramètres API"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:113
+msgid "Click here to create and view your API Credentials"
+msgstr "Cliquez ici pour créer et voir vos paramètres API"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-setup.php:118
+msgid "API Subdomain"
+msgstr "Sous-domaine API"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:20
+msgid "Build your Social Sharing Icons"
+msgstr "Editez les boutons Social Sharing"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:27
+msgid ""
+"Add this plugin to your website to allow your users to share comments, "
+"purchases and other activities	directly from your website to their friends \n"
+"											on multiple social networks."
+msgstr ""
+"Ajoutez ce plugin sur votre site pour permettre à vos utilisateur de "
+"partager commentaires, achats et autre activités à ses amis sur de nombreux "
+"réseaux sociaux."
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:32
+msgid ""
+"You can simply drag&amp;drop from <strong>Available Services/Add-"
+"ons</strong> \n"
+"											to <strong>Selected Services &amp; Add-ons</strong> and vice "
+"versa. \n"
+"											You can also drag&amp;drop the elements to change the order of "
+"the buttons."
+msgstr ""
+"Glissez déposez simplement les éléments pour ajouter, supprimer ou changer "
+"l'ordre des boutons."
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:38
+msgid "Preview"
+msgstr "Aperçu"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:52
+msgid "Choose the default button type to use:"
+msgstr "Choisissez le type de boutons par défaut:"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:60
+msgid "Small"
+msgstr "Petit"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:70
+msgid "Medium"
+msgstr "Médium"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:80
+msgid "Large"
+msgstr "Large"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:90
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:100
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:109
+msgid "Choose the sharing Add-ons and Services to use:"
+msgstr "Choisissez les Add-ons et services à utiliser:"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:116
+msgid "Selected Services &amp; Add-ons"
+msgstr "Services et Add-ons selectionnés"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:126
+msgid "Available Services"
+msgstr "Services disponibles"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:148
+msgid "Plugin Position"
+msgstr "Position du plugin"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:153
+msgid "Left floating (all pages)"
+msgstr "Fixe gauche (toutes les pages)"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:163
+msgid "Right floating (all pages)"
+msgstr "Fixe droite (toutes les pages)"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:173
+msgid "Blog header"
+msgstr "Blog header"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:183
+msgid "Blog footer"
+msgstr "Blog footer"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:193
+msgid "After each post"
+msgstr "Après chaque post"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:203
+msgid "Before sidebar"
+msgstr "Avant la sidebar"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:213
+msgid "After sidebar"
+msgstr "Après la sidebar"
+
+#: ../admin/templates/oa-social-sharing-icons-admin-wizard.php:223
+msgid "WordPress credits"
+msgstr "Crédits WordPress"
