@@ -1,9 +1,3 @@
-/*
- * Copyright (c) oneall.com - All rights reserved
- * This product is protected by copyright and distributed under
- * licenses restricting copying, distribution and decompilation.
- */
-
 /* Wizard */
 var plugin_wizard = {};
 
@@ -11,7 +5,6 @@ var plugin_wizard = {};
 plugin_wizard.social_sharing = {
 	application_domain : ''
 };
-
 	
 jQuery(document).ready(function($) {
 
@@ -64,64 +57,12 @@ jQuery(document).ready(function($) {
 			generate_preview();
 			thiz.trigger_refresh_preview();
 		});
-
-		/* Page URL */
-		val = 'My fruits and vegetables shop';	
-		elm = $("input[name=title_to_share]");
-		thiz.set_input_default (elm, val);	
-		elm.keypress(function() {
-			thiz.trigger_refresh_preview();
-		});
-
-		/* Page URL */
-		val = 'http://www.my-fruits-shop.com/';	
-		elm = $("input[name=url_to_share]");
-		thiz.set_input_default (elm, val);
-		elm.keypress(function() {
-			thiz.trigger_refresh_preview();
-		});
 		
-		/* Page Thumbnail URL */
-		val = 'http://www.my-fruits-shop.com/thumbnail.png';	
-		elm = $("input[name=image_to_share]");
-		thiz.set_input_default (elm, val);
-		elm.keypress(function() {
+		/* Layout Changes */
+		$('.layout_button').click(function()  {
+			generate_preview();
 			thiz.trigger_refresh_preview();
-		});
-		
-		/* Page Summary */
-		val = 'The best frozen fruits and vegetables on the internet';	
-		elm = $("input[name=summary_to_share]");
-		thiz.set_input_default (elm, val);
-		elm.keypress(function() {
-			thiz.trigger_refresh_preview();
-		});
-			
-		/* Layout Type */
-		$("input[name=layout_type]").change(function() {
-			thiz.trigger_refresh_preview();
-		});
-		
-		/* Trigger Social Insights */
-		$("input[name=social_insights]").change(function() {
-			thiz.trigger_refresh_preview();
-		});
-		
-		/* Set button title */	
-		$("input[name=button_title]").keypress(function() {
-			thiz.trigger_refresh_preview();
-		});
-
-		// /* Build Library Code */
-		// library_code = "<script type=\"text/javascript\">\n" 
-		// 	+ " var oa = document.createElement('script');\n" 
-		// 	+ " oa.type = 'text/javascript'; oa.async = true;\n" 
-		// 	+ " oa.src = '//" + this.application_domain + "/socialize/library.js'\n"
-		//   + " var s = document.getElementsByTagName('script')[0];\n" 
-		//   + " s.parentNode.insertBefore(oa, s)\n" + "</script>";
-
-		// /* Update Library Code */
-		// $('#library_code').val(library_code);
+		});	
 
 		/* Refresh preview */
 		this.trigger_refresh_preview();

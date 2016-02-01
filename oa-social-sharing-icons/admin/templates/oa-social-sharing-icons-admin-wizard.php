@@ -52,7 +52,7 @@ $form_value = json_decode($settings['wizard_final_choice']);
 										<?php _e ('Choose the default button type to use:', 'oa-social-sharing-icons');?>
 									</div>								
 									<div class="input square">
-										<div class="border">
+										<div class="border layout_button">
 											<div class="option">
 												<input type="radio" name="layout_type" value="btns_s" id="layout_type_small_buttons" 
 												<?php echo ($form_value->default_size=='btns_s') ? 'checked="checked"' : ''; ?> /> 
@@ -62,7 +62,7 @@ $form_value = json_decode($settings['wizard_final_choice']);
 									</div>								
 									
 									<div class="input square">
-										<div class="border">
+										<div class="border layout_button">
 											<div class="option">
 												<input type="radio" name="layout_type" value="btns_m" id="layout_type_medium_buttons" 
 												<?php echo ($form_value->default_size=='btns_m') ? 'checked="checked"' : ''; ?> /> 
@@ -72,7 +72,7 @@ $form_value = json_decode($settings['wizard_final_choice']);
 									</div>	
 									
 									<div class="input square">
-										<div class="border">
+										<div class="border layout_button">
 											<div class="option">
 												<input type="radio" name="layout_type" value="btns_l" id="layout_type_large_buttons" 
 												<?php echo ($form_value->default_size=='btns_l') ? 'checked="checked"' : ''; ?> /> 
@@ -82,7 +82,7 @@ $form_value = json_decode($settings['wizard_final_choice']);
 									</div>					
 																	
 									<div class="input square">
-										<div class="border">
+										<div class="border layout_button">
 											<div class="option">
 												<input type="radio" name="layout_type" value="count_h" id="layout_type_horizontal_counters" 
 												<?php echo ($form_value->default_size=='count_h') ? 'checked="checked"' : ''; ?> /> 
@@ -92,7 +92,7 @@ $form_value = json_decode($settings['wizard_final_choice']);
 									</div>											
 													
 									<div class="input square">
-										<div class="border">
+										<div class="border layout_button">
 											<div class="option">
 												<input type="radio" name="layout_type" value="count_v" id="layout_type_vertical_counters" 
 												<?php echo ($form_value->default_size=='count_v') ? 'checked="checked"' : ''; ?> /> 
