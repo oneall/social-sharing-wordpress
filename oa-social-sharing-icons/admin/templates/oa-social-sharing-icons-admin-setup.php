@@ -1,26 +1,24 @@
 <?php
 
 /**
- * Provide a admin area view for the plugin
- *
- * This file is used to markup the admin-facing aspects of the plugin.
+ * Social Sharing Icons admin setup
  *
  * @link       http://www.oneall.com
- * @since      1.0.0
- *
  * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/admin/templates
+ * @subpackage oa_social_sharing_icons/admin
  */
-
 $settings_login = get_option ('oa_social_login_settings');
 
 //get subdomain
 $api_subdomain = '';
-if (!$this->config->get_user_subdomain()){
-	if (!empty($settings_login['api_subdomain'])) {
+if (!$this->config->get_user_subdomain())
+{
+	if (!empty($settings_login['api_subdomain']))
+	{
 		$api_subdomain = $settings_login['api_subdomain'];
 	}
-} else {
+} else
+{
 	$api_subdomain = $this->config->get_user_subdomain();
 }
 
@@ -44,7 +42,7 @@ if (!$this->config->get_user_subdomain()){
 					<li><?php printf (__ ('<a target="_blank" href="%s">Follow us on Twitter</a> to stay informed about updates', 'oa-social-sharing-icons'), 'http://www.twitter.com/oneall'); ?>;</li>
 					<li><?php printf (__ ('Feel free to <a target="_blank" href="%s">get in touch</a> if you have any questions', 'oa-social-sharing-icons'), 'http://support.oneall.com/forums/'); ?>;</li>
 					<li><?php printf (__ ('<a target="_blank" href="%s">Contact us</a> if you have feedback or need assistance', 'oa-social-sharing-icons'), 'http://www.oneall.com/company/contact-us/'); ?>.
-					<li><?php printf (__ ('Let your visitors comment, login and register with 30+ Social Networks with our <a target="_blank" href="%s">Social Login plugin</a>!', 'oa-social-sharing-icons'), 'https://wordpress.org/plugins/oa-social-login/'); ?>.
+					<li><?php printf (__ ('Let your visitors comment, login and register with 30+ Social Networks with our <a target="_blank" href="%s">Social Login plugin</a>!', 'oa-social-sharing-icons'), 'https://wordpress.org/plugins/oa-social-login/'); ?>
 					</li>
 				</ul>
 			</div>

@@ -1,4 +1,4 @@
-div.floating_sharing {
+div.oass_floating_sharing {
     background-color: #E9E9E9;
     position: fixed;
 	top: 30%;
@@ -7,14 +7,14 @@ div.floating_sharing {
 	margin: 0 auto;
 }
 
-div#floating_left_sharing {
+div#oass_floating_left_sharing {
     left: 0;
 }
-div#floating_right_sharing {
+div#oass_floating_right_sharing {
     right: 0;
 }
 
-div.floating_sharing .oas_btn {
+div.oass_floating_sharing .oas_btn {
    	float: left;
     clear: both;
 }

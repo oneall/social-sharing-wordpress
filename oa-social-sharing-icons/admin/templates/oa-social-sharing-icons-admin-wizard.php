@@ -1,12 +1,21 @@
 <?php
+
+/**
+ * Social Sharing Icons admin wizard
+ *
+ * @link       http://www.oneall.com
+ * @package    oa_social_sharing_icons
+ * @subpackage oa_social_sharing_icons/admin
+ */
+
 //get all services and addons
 $oa_social_sharing_icons_admin_methods = new oa_social_sharing_icons_admin_methods();
-$oa_social_sharing_icons_selected      = $oa_social_sharing_icons_admin_methods->get_selected_methods();
-$oa_social_sharing_icons_services      = $oa_social_sharing_icons_admin_methods->get_methods_by_type('service');
-$oa_social_sharing_icons_addons        = $oa_social_sharing_icons_admin_methods->get_methods_by_type('addon');
+$oa_social_sharing_icons_selected = $oa_social_sharing_icons_admin_methods->get_selected_methods();
+$oa_social_sharing_icons_services = $oa_social_sharing_icons_admin_methods->get_methods_by_type('service');
+$oa_social_sharing_icons_addons = $oa_social_sharing_icons_admin_methods->get_methods_by_type('addon');
 
 //check if there is a choice in database
-$settings   = get_option ('oa_social_sharing_icons_settings');
+$settings = get_option ('oa_social_sharing_icons_settings');
 $form_value = json_decode($settings['wizard_final_choice']);
 ?>
 

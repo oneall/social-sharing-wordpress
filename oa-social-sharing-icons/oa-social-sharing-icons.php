@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Plugin Name: Social Sharing Icons 
  * Plugin URI: http://www.oneall.com/ 
  * Description: Allow your visitors to <strong>share content</strong> to 30+ social networks</strong>. Includes services like for example Facebook Likes, Twitter Tweets, Google Plus and LinkedIn sharing. 
