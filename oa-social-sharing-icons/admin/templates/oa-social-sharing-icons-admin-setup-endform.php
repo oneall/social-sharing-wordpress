@@ -8,7 +8,7 @@
 
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-				plugin_wizard.social_sharing.init ("<?php echo $api_subdomain.'.api.oneall.io';?>");
+				plugin_wizard.social_sharing.init ("<?php echo $api_subdomain.'.api.oneall.com';?>");
 				generate_preview();
 			 });
 
