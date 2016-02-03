@@ -1,18 +1,16 @@
 <?php
 
 /**
- * Social Sharing Icons Widget
- *
- * @link       http://www.oneall.com
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/admin
+ * Social Sharing Icons \ Widgets
+ * @link		http://www.oneall.com
+ * @package 	oa_social_sharing_icons
  */
 class oa_social_sharing_icons_admin_widget extends WP_Widget
 {
 	public $oa_social_config;
 
 	/**
-	 * Constructor
+	 * Constructor.
 	 */
 	public function __construct ()
 	{
@@ -24,7 +22,7 @@ class oa_social_sharing_icons_admin_widget extends WP_Widget
 	}
 
 	/**
-	 * Display the widget
+	 * Display Widget.
 	 */
 	public function widget ($args, $instance)
 	{
@@ -36,7 +34,7 @@ class oa_social_sharing_icons_admin_widget extends WP_Widget
 	}
 
 	/**
-	 * Show Widget Settings
+	 * Display Widget Settings.
 	 */
 	public function form ($instance)
 	{
@@ -49,22 +47,22 @@ class oa_social_sharing_icons_admin_widget extends WP_Widget
 		$instance = wp_parse_args ((array) $instance, $default_settings);
 		
 		?>
-
-			<p>
-				<label for="<?php echo $this->get_field_id ('widget_title'); ?>"><?php _e ('Title', 'oa-social-sharing-icons'); ?>:</label>
-				<input class="widefat" id="<?php echo $this->get_field_id ('widget_title'); ?>" name="<?php echo $this->get_field_name ('widget_title'); ?>" type="text" value="<?php echo $instance ['widget_title']; ?>" />
-			</p>
-			<p>
-				<label for="<?php echo $this->get_field_id ('widget_size_value'); ?>"><?php _e ('Size', 'oa-social-sharing-icons'); ?>:</label> 
-				<select class="widefat" id="<?php echo $this->get_field_id ('widget_size_value'); ?>" name="<?php echo $this->get_field_name ('widget_size_value'); ?>">
+<p>
+	<label for="<?php echo $this->get_field_id ('widget_title'); ?>"><?php _e ('Title', 'oa-social-sharing-icons'); ?>:</label> <input
+		class="widefat" id="<?php echo $this->get_field_id ('widget_title'); ?>" name="<?php echo $this->get_field_name ('widget_title'); ?>"
+		type="text" value="<?php echo $instance ['widget_title']; ?>" />
+</p>
+<p>
+	<label for="<?php echo $this->get_field_id ('widget_size_value'); ?>"><?php _e ('Size', 'oa-social-sharing-icons'); ?>:</label> <select
+		class="widefat" id="<?php echo $this->get_field_id ('widget_size_value'); ?>" name="<?php echo $this->get_field_name ('widget_size_value'); ?>">
 					<?php echo oa_social_sharing_icons_admin::print_select_position_options( $instance ['widget_size_value'] ); ?>
 				</select>
-			</p>
-		<?php
+</p>
+<?php
 	}
 
 	/**
-	 * Update Widget Settings
+	 * Update Widget Settings.
 	 */
 	public function update ($new_instance, $old_instance)
 	{
@@ -75,7 +73,7 @@ class oa_social_sharing_icons_admin_widget extends WP_Widget
 	}
 
 	/**
-	 * Display the provider grid
+	 * Display Providers.
 	 */
 	public function render_sharing_form ($instance = array ())
 	{

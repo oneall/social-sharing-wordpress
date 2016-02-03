@@ -9,7 +9,7 @@ Allow your visitors to <strong>share content</strong> to 30+ social networks</st
 
 == Description ==
 
-Social Login is a professionally developed and free Wordpress (BuddyPress compatible) plugin that allows your users to 
+This is a professionally developed and free Wordpress (BuddyPress compatible) plugin that allows your users to 
 easily share content directly from your blog to 30+ social networks. ncludes services like for example Facebook Likes, Twitter Tweets, Google Plus and LinkedIn sharing. 
 <br /><br />
 
@@ -85,15 +85,6 @@ It should work out of the box.
 
 Our support team answers your questions at:<br />
 http://support.oneall.com/forums/
-
-
-== Screenshots ==
-
-1. **Comment** - Comment formular (Social Network Buttons are included)
-2. **Login** - Login formular (Social Network Buttons are included)
-3. **Plugin Settings** - Plugin Settings in the Wordpress Administration Area
-4. **Widget Settings** - Widget Settings in the Wordpress Administration Area
-5. **Login** - Login formular with small buttons (Social Network Buttons are included)
 
 == Changelog ==
 

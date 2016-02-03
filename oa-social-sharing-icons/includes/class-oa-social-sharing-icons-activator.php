@@ -1,36 +1,17 @@
 <?php
 
 /**
- * Fired during plugin activation
- *
- * @link       http://www.oneall.com
- * @since      1.0.0
- *
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/includes
+ * Social Sharing Icons \ Activator
+ * @link		http://www.oneall.com
+ * @package 	oa_social_sharing_icons
  */
-
-/**
- * Fired during plugin activation.
- *
- * This class defines all code necessary to run during the plugin's activation.
- *
- * @since      1.0.0
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/includes
- * @author     Your Name <email@example.com>
- */
-class oa_social_sharing_icons_Activator {
+class oa_social_sharing_icons_Activator
+{
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
+	 * Called when the plugin is activated.
 	 */
-	public static function activate() {
-
+	public static function activate ()
+	{
 	}
-
 }

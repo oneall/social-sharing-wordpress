@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Social Sharing Icons Providers
- *
- * @link       http://www.oneall.com
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/admin
+ * Social Sharing Icons \ Methods
+ * @link		http://www.oneall.com
+ * @package 	oa_social_sharing_icons
  */
+
 class oa_social_sharing_icons_admin_methods
 {
 	
@@ -261,6 +260,10 @@ class oa_social_sharing_icons_admin_methods
 		return $methods_by_param;
 	}
 
+	//////////////////////////////////////////////////////////////////////////////
+	// STATIC
+	//////////////////////////////////////////////////////////////////////////////
+	
 	/**
 	 * Get all default methods.
 	 */

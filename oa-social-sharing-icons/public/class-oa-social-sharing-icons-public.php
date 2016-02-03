@@ -1,35 +1,29 @@
 <?php
 
 /**
- * The public-facing functionality of the plugin.
- *
- * @link       http://www.oneall.com
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/public
+ * Social Sharing Icons \ Public Features
+ * @link		http://www.oneall.com
+ * @package 	oa_social_sharing_icons
  */
 class oa_social_sharing_icons_public extends oa_social_sharing_icons
 {	
 	/**
 	 * Selected methods : Twitter, Facebook...	
-	 * @var array
 	 */
 	public $selected_methods;
 	
 	/**
 	 * Selected default size
-	 * @var string
 	 */
 	public $default_size;
 	
 	/**
 	 * Selected positions
-	 * @var array
 	 */
 	public $positions = array();
 	
 	/**
 	 * Define which hooks to use for which position
-	 * @var array
 	 */
 	public $positions_hooks = array(
 		'position_dynamic_sidebar_before' => array(
@@ -68,7 +62,6 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 
 	/**
 	 * Initialize the class and set its properties.
-	 * @return void
 	 */
 	public function __construct ($source = null)
 	{
@@ -95,8 +88,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Init data saved in database
-	 * @return void
+	 * Init data saved in the database.
 	 */
 	public function init_data ()
 	{		
@@ -116,8 +108,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Add hook for each position specified
-	 * @return void
+	 * Add hook for each specified position
 	 */
 	public function add_hooks_all_positions ()
 	{
@@ -134,7 +125,6 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 
 	/**
 	 * Setup Shortcode handler
-	 * @return string html plugin
 	 */
 	public function shortcode_handler ($atts, $size = null)
 	{
@@ -253,8 +243,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Generate html sharing block
-	 * @return string html
+	 * Generate HTML sharing block
 	 */
 	public function print_sharing_block ($position_id, $size)
 	{
@@ -279,7 +268,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Register the stylesheets for the public-facing side of the site.
+	 * Register the stylesheets for the public-facing side of the plugin.
 	 */
 	public function enqueue_styles ()
 	{
@@ -287,7 +276,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Register the JavaScript for the public-facing side of the site.
+	 * Register the JavaScript for the public-facing side of the plugin.
 	 */
 	public function enqueue_scripts ()
 	{

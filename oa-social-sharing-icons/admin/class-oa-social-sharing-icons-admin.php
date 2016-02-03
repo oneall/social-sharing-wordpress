@@ -1,11 +1,9 @@
 <?php
 
 /**
- * Social Sharing Icons admin menu.
- *
- * @link       http://www.oneall.com
- * @package    oa_social_sharing_icons
- * @subpackage oa_social_sharing_icons/admin
+ * Social Sharing Icons \ Admin
+ * @link		http://www.oneall.com
+ * @package 	oa_social_sharing_icons
  */
 class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 {
@@ -19,10 +17,16 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		parent::__construct ($oa_social_config);
 		
 		// Form action
-		add_action ('admin_init', array($this,'register_settings'));
+		add_action ('admin_init', array(
+			$this,
+			'register_settings' 
+		));
 		
 		// Add hook for admin <head></head>
-		add_action ('admin_head', array($oa_social_config,'get_oa_library_js'));
+		add_action ('admin_head', array(
+			$oa_social_config,
+			'get_oa_library_js' 
+		));
 	}
 
 	/**
@@ -48,11 +52,14 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	 */
 	public function add_admin_page ()
 	{
-		add_menu_page ('OneAll Social Sharing ' . __ ('Setup', 'oa-social-sharing-icons'), 'Social Sharing', 'manage_options', $this->plugin_name . '_setup', array($this,'load_admin_setup_content'), 'dashicons-share');
+		add_menu_page ('OneAll Social Sharing ' . __ ('Setup', 'oa-social-sharing-icons'), 'Social Sharing', 'manage_options', $this->plugin_name . '_setup', array(
+			$this,
+			'load_admin_setup_content' 
+		), 'dashicons-share');
 	}
 
 	/**
-	 * Add Setup Link in plugin page.
+	 * Add Setup Link to the plugin page.
 	 */
 	public function add_setup_link ($links, $file)
 	{
@@ -60,7 +67,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		{
 			$settings_link = '<a href="admin.php?page=oa-social-sharing-icons_setup">' . __ ('Setup', 'oa-social-sharing-icons') . '</a>';
 			array_unshift ($links, $settings_link);
-		}		
+		}
 		return $links;
 	}
 
@@ -81,7 +88,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Generate select options
+	 * Generate select options.
 	 */
 	public static function print_select_position_options ($selected_option = null)
 	{
@@ -105,15 +112,18 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	}
 
 	/**
-	 * Register plugin settings and their sanitization callback
+	 * Register plugin settings and their sanitization callback.
 	 */
 	public function register_settings ()
 	{
-		register_setting ('oa_social_sharing_icons_settings_group', 'oa_social_sharing_icons_settings', array($this,'validate_settings'));
+		register_setting ('oa_social_sharing_icons_settings_group', 'oa_social_sharing_icons_settings', array(
+			$this,
+			'validate_settings' 
+		));
 	}
 
 	/**
-	 * Plugin settings sanitization callback
+	 * Plugin settings sanitization callback.
 	 */
 	public function validate_settings ($settings)
 	{
@@ -134,7 +144,10 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		}
 		
 		// Extract fields
-		foreach (array('api_subdomain', 'wizard_final_choice') as $key)
+		foreach (array(
+			'api_subdomain',
+			'wizard_final_choice' 
+		) as $key)
 		{
 			if (isset ($settings [$key]))
 			{
