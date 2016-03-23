@@ -6,19 +6,9 @@
  * @package 	oa_social_sharing_icons
  */
 class oa_social_sharing_icons_public extends oa_social_sharing_icons
-{	
+{		
 	/**
-	 * Selected methods : Twitter, Facebook...	
-	 */
-	public $selected_methods;
-	
-	/**
-	 * Selected default size
-	 */
-	public $default_size;
-	
-	/**
-	 * Selected positions
+	 * Enabled Positions
 	 */
 	public $positions = array();
 	
@@ -26,50 +16,55 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 * Define which hooks to use for which position
 	 */
 	public $positions_hooks = array(
-		'position_dynamic_sidebar_before' => array(
+		'dynamic_sidebar_before' => array(
 			'hook' => 'dynamic_sidebar_before',
 			'function' => 'add_content_dynamic_sidebar_before' 
 		),
-		'position_dynamic_sidebar_after' => array(
+		'dynamic_sidebar_after' => array(
 			'hook' => 'dynamic_sidebar_after',
 			'function' => 'add_content_dynamic_sidebar_after' 
 		),
-		'position_header' => array(
+		'header' => array(
 			'hook' => 'get_header',
 			'function' => 'add_content_get_header' 
 		),
-		'position_footer' => array(
+		'footer' => array(
 			'hook' => 'get_footer',
 			'function' => 'add_content_get_footer' 
 		),
-		'position_end_post' => array(
+		'end_post' => array(
 			'hook' => 'the_content',
 			'function' => 'add_content_end_post' 
 		),
-		'position_credits' => array(
+		'credits' => array(
 			'hook' => '_credits',
 			'function' => 'add_content_credits' 
 		),
-		'position_left_floating' => array(
+		'left_floating' => array(
 			'hook' => 'get_header',
 			'function' => 'add_content_floating_left' 
 		),
-		'position_right_floating' => array(
+		'right_floating' => array(
 			'hook' => 'get_header',
 			'function' => 'add_content_floating_right' 
-		) 
+		), 
+		'comment_form_before' => array(
+			'hook' => 'comment_form_before',
+			'function' => 'add_content_comment_form_before'
+		),
+		'comment_form_after' => array(
+			'hook' => 'comment_form_after',
+			'function' => 'add_content_comment_form_after'
+		)		
 	);
 
 	/**
 	 * Initialize the class and set its properties.
 	 */
 	public function __construct ($source = null)
-	{
-		$oa_social_config = oa_social_sharing_icons_config::getInstance ();
-		parent::__construct ($oa_social_config);
-		
+	{		
 		// Add theme name to credits hook
-		$this->positions_hooks ['position_credits'] ['hook'] = get_template () . '_credits';
+		$this->positions_hooks ['credits'] ['hook'] = get_template () . '_credits';
 		
 		// Get all data
 		$this->init_data ();
@@ -80,10 +75,10 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			$this->add_hooks_all_positions ();
 		}
 		
-		// Shortcode [oa_social_sharing_icons]
+		// Shortcode: [oa_social_sharing_icons]
 		add_shortcode ('oa_social_sharing_icons', array($this, 'shortcode_handler'));
 		
-		// Actioon do_action ('oa_social_sharing_icons');
+		// Action: do_action ('oa_social_sharing_icons');
 		add_action ('oa_social_sharing_icons', array($this, 'shortcode_handler'), 10, 2);
 	}
 
@@ -92,18 +87,19 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function init_data ()
 	{		
-		// Check if we have settings in the database
-		$settings = get_option ('oa_social_sharing_icons_settings');
-		$values = json_decode ($settings ['wizard_final_choice']);
-		
-		$this->default_size = (!empty ($values->default_size)) ? $values->default_size : 'btns_m';
-		$this->selected_methods = (!empty ($values->methods)) ? $values->methods : null;
-		$this->positions = array();
+		// Load Configuration 
+		$oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
+
+		// Enabled Positions
+		$enabled_positions = $oa_social_sharing_icons_config->get_positions();
 		
 		// For all positions
-		foreach ($this->positions_hooks as $position => $unused_additionnal_info)
+		if (is_array ($enabled_positions) && count ($enabled_positions) > 0)
 		{
-			$this->positions [$position] = (!empty ($values->{$position})) ? $values->{$position} : 'disabled';
+			foreach ($this->positions_hooks AS $position_key => $position_data)
+			{
+				$this->positions [$position_key] = (!empty ($enabled_positions[$position_key]) ? $enabled_positions[$position_key] : 'disabled');
+			}
 		}
 	}
 
@@ -142,7 +138,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			$shortcode_html_id = 'custom';
 		}
 		
-		$button_size = !empty ($size) ? $size : (!empty ($atts ['size']) ? $atts ['size'] : $this->default_size);
+		$button_size = !empty ($size) ? $size : (!empty ($atts ['size']) ? $atts ['size'] : oa_social_sharing_icons_config::getInstance()->get_default_size());
 		
 		// In posts, needed for the shortcode to be placed at the good place
 		if (is_single ())
@@ -162,7 +158,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */ 
 	public function add_content_custom ($position, $size)
 	{
-		echo $this->print_sharing_block ($position, $size);
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_custom">'.$this->print_sharing_block ($position, $size) .'</div>';
 	}
 
 	/**
@@ -170,8 +166,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_floating_left ($content)
 	{
-		$size = $this->positions ['position_left_floating'];
-		echo '<div id="oass_floating_left_sharing" class="oass_floating_sharing">' . $this->print_sharing_block ('position_left_floating', $size) . '</div>';
+		$size = $this->positions ['left_floating'];
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_floating oneall_sharing_icons_floating_left">'. $this->print_sharing_block ('left_floating', $size) . '</div>';
 	}
 
 	/**
@@ -179,8 +175,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_floating_right ($content)
 	{
-		$size = $this->positions ['position_right_floating'];
-		echo '<div id="oass_floating_right_sharing" class="oass_floating_sharing">' . $this->print_sharing_block ('position_right_floating', $size) . '</div>';
+		$size = $this->positions ['right_floating'];
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_floating oneall_sharing_icons_floating_right">'. $this->print_sharing_block ('right_floating', $size) . '</div>';
 	}
 	
 	/**
@@ -190,8 +186,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	{		
 		if (is_single ())
 		{
-			$size = $this->positions ['position_end_post'];
-			return $content . $this->print_sharing_block ('position_end_post', $size);
+			$size = $this->positions ['end_post'];
+			return $content . '<div class="oneall_sharing_icons oneall_sharing_icons_post oneall_sharing_icons_post_end">' . $this->print_sharing_block ('end_post', $size) . '</div>';
 		}
 		
 		return $content;
@@ -202,8 +198,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_get_header ()
 	{
-		$size = $this->positions ['position_header'];
-		echo $this->print_sharing_block ('position_header', $size);
+		$size = $this->positions ['header'];
+		echo '<span class="oneall_sharing_icons oneall_sharing_icons_header">' . $this->print_sharing_block ('header', $size).'</span>';
 	}
 	
 	/**
@@ -211,8 +207,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_get_footer ()
 	{
-		$size = $this->positions ['position_footer'];
-		echo $this->print_sharing_block ('position_footer', $size);
+		$size = $this->positions ['footer'];
+		echo '<span class="oneall_sharing_icons oneall_sharing_icons_footer">'. $this->print_sharing_block ('footer', $size). '</span>';
 	}
 
 	/**
@@ -220,8 +216,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_credits ()
 	{
-		$size = $this->positions ['position_credits'];
-		echo $this->print_sharing_block ('position_credits', $size);
+		$size = $this->positions ['credits'];
+		echo '<span class="oneall_sharing_icons oneall_sharing_icons_credits">'. $this->print_sharing_block ('credits', $size) .'</span>';
 	}
 
 	/**
@@ -229,8 +225,8 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_dynamic_sidebar_before ()
 	{
-		$size = $this->positions ['position_dynamic_sidebar_before'];
-		echo $this->print_sharing_block ('position_dynamic_sidebar_before', $size);
+		$size = $this->positions ['dynamic_sidebar_before'];
+		echo '<aside class="widget oneall_sharing_icons oneall_sharing_icons_sidebar oneall_sharing_icons_sidebar_before">' . $this->print_sharing_block ('dynamic_sidebar_before', $size) . '</aside>';
 	}
 
 	/**
@@ -238,33 +234,74 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_content_dynamic_sidebar_after ()
 	{
-		$size = $this->positions ['position_dynamic_sidebar_after'];
-		echo $this->print_sharing_block ('position_dynamic_sidebar_after', $size);
+		$size = $this->positions ['dynamic_sidebar_after'];
+		echo '<aside class="widget oneall_sharing_icons oneall_sharing_icons_sidebar oneall_sharing_icons_sidebar_after">' . $this->print_sharing_block ('dynamic_sidebar_after', $size) . '</aside>';
+	}
+	
+	/**
+	 * Position: Before Comment Form
+	 */
+	public function add_content_comment_form_before ()
+	{
+		$size = $this->positions ['comment_form_before'];
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_comment_form oneall_sharing_icons_comment_form_before">' . $this->print_sharing_block ('comment_form_before', $size) . '</div>';
+	}
+	
+	/**
+	 * Position: After Comment Form
+	 */
+	public function add_content_comment_form_after ()
+	{
+		$size = $this->positions ['comment_form_after'];
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_comment_form oneall_sharing_icons_comment_form_after">' . $this->print_sharing_block ('comment_form_after', $size) . '</div>';
 	}
 
+	
+	
 	/**
 	 * Generate HTML sharing block
 	 */
-	public function print_sharing_block ($position_id, $size)
+	public function print_sharing_block ($sharing_block_class, $display_size)
 	{
-		if (isset ($this->selected_methods) && is_array ($this->selected_methods))
+		// Sharing Block
+		$social_sharing_block = '';
+		
+		// Read Configuration
+		$oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
+		
+		// Enabled Methods
+		$enabled_methods = $oa_social_sharing_icons_config->get_enabled_methods(false, true);
+		
+		// Any Methods enabled?
+		if (is_array ($enabled_methods) && count ($enabled_methods) > 0)
 		{
-			$size = (($size == 'default') ? $this->default_size : $size);
+			// Default Size
+			$default_size = $oa_social_sharing_icons_config->get_default_size();
 			
-			if ($size != 'disabled')
+			// Button Text
+			$button_text = $oa_social_sharing_icons_config->get_button_text ();
+			
+			// Open Graph Tags
+			$disable_og_tags = $oa_social_sharing_icons_config->get_disable_og_tags();
+					
+			// Size for the buttons
+			$display_size = (($display_size == 'default') ? $default_size : $display_size);
+			
+			// Not disabled
+			if ($display_size <> 'disabled')
 			{
-				$social_sharing_block = '<div class="oas_box oas_box_' . $size . ' oas_box_' . $position_id . '">';
-				foreach ($this->selected_methods as $method)
-				{
-					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method->key . '" title="Send to ' . $method->title . '"></span>';
-				}
-				$social_sharing_block .= '</div>';
+				$social_sharing_block .= '<span class="oas_box oas_box_' . $display_size . ' oas_box_' . $sharing_block_class . '"'.( ! empty ($disable_og_tags) ? ' data-read-og-tags="false"' : '').'>';
 				
-				// Done
-				return $social_sharing_block;
+				foreach ($enabled_methods as $method_data)
+				{
+					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method_data['name_key'] . '" title="' . str_replace ('%provider.name%', $method_data['name'], $button_text) . '"></span>';
+				}
+				
+				$social_sharing_block .= '</span>';
 			}
 		}
-		return null;
+		
+		return $social_sharing_block;
 	}
 
 	/**
@@ -281,5 +318,41 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	public function enqueue_scripts ()
 	{
 		wp_enqueue_script ($this->plugin_name, plugin_dir_url (__FILE__) . 'js/oa-social-sharing-icons-public.js', array('jquery'), $this->version, false);
+	}
+	
+		/**
+	 * Adds the OneAll libray to the admin area
+	 */
+	public function display_library_js ()
+	{
+		// Load Config
+		$oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
+		
+		// API Subdomain
+		$api_subdomain = $oa_social_sharing_icons_config->get_api_subdomain(false, true);
+		
+		// Initial Setup
+		if ( ! empty ($api_subdomain))
+		{
+			// Plugin Version
+			$plugin_version = $oa_social_sharing_icons_config->get_plugin_version();
+			
+			//JavaScript Method Reference: http://docs.oneall.com/api/javascript/library/methods/
+			$output = array ();
+			$output [] = '';
+			$output [] = " <!-- OneAll.com / Social Sharing for WordPress / v" . $plugin_version . " -->";
+			$output [] = '<script data-cfasync="false" type="text/javascript">';
+			$output [] = " (function() {";
+			$output [] = "  var oa = document.createElement('script'); oa.type = 'text/javascript';";
+			$output [] = "  oa.async = true; oa.src = '//" . $api_subdomain . "/socialize/library.js';";
+			$output [] = "  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oa, s);";
+			$output [] = " })();";
+			$output [] = "</script>";
+			$output [] = '';
+			
+			//Display
+			echo implode ("\n", $output);
+		}
+		
 	}
 }

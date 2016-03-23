@@ -1,0 +1,379 @@
+#oneall {
+	max-width: 900px;
+}
+
+#oneall .oneall_pull_right {
+	float: right !important;
+}
+
+#oneall ul {
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
+#oneall ul li {
+	padding-left: 5px;
+}
+
+#oneall .oneall_buttons {
+	text-align: center;
+}
+
+#oneall .oneall_btn {
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	letter-spacing: 0;
+	margin: 0 5px;
+}
+
+#oneall .oneall_btn_success {
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color: #fff;
+}
+
+#oneall .oneall_btn_success:hover,#oneall .oneall_btn_success:focus,#oneall .oneall_btn_success:active {
+	background-color: #449d44;
+	border-color: #398439;
+	color: #fff;
+}
+
+/* ============ BASIC BOX */
+#oneall .oneall_box {
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	margin-bottom: 35px;
+	padding: 10px 15px;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#oneall .oneall_box_title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#oneall .oneall_box_title a {
+	font-size: 12px;
+	color: #eee;
+}
+
+#oneall .oneall_box_title a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#oneall .oneall_box_section {
+	margin-bottom: 35px;
+}
+
+#oneall .oneall_box_title+.oneall_box_contents {
+	border-top: 1px solid #ccc;
+}
+
+/* ============ HELP BOX */
+#oneall .oneall_box_help {
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+	color: #8a6d3b;
+}
+
+#oneall .oneall_box_help .oneall_box_contents {
+	border-color: #decfb0;
+}
+
+#oneall .oneall_box_help a {
+	color: #4a2d00;
+	font-weight: bold;
+}
+
+/* ============ SETUP BOX */
+#oneall .oneall_box_setup {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #31708f;
+}
+
+#oneall .oneall_box_setup .oneall_box_contents {
+	border-color: #a3cfd8;
+}
+
+#oneall .oneall_box_setup a {
+	color: #3e687b;
+	font-weight: bold;
+}
+
+#oneall .oneall_box_setup .oneall_buttons a {
+	color: #6c6c6c;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+}
+
+/* ============ UPDATED BOX */
+#oneall .oneall_box_updated {
+	background-color: #e2f3db;
+	border-color: #d1e4c1;
+	color: #3c763d;
+}
+
+/* ============ CONFIG BOX */
+#oneall .oneall_box_config {
+	padding: 0;
+}
+
+#oneall .oneall_box_config .oneall_box_title {
+	background-color: #31708f;
+	border-bottom: 1px solid #eee;
+	color: #fff;
+	line-height: 20px;
+	padding: 8px 15px;
+	text-shadow: 0 1px 0 #333
+}
+
+#oneall .oneall_box_config .oneall_box_contents {
+	border: 0 none;
+}
+
+#oneall .oneall_box_config .button-primary {
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color: #fff;
+}
+
+/* ============ TEASER BOX */
+#oneall .oneall_box_teaser {
+	padding: 0;
+}
+
+#oneall .oneall_box_teaser .oneall_box_title {
+	background-color: #5cb85c;
+	color: #fff;
+	padding: 15px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 1px solid #4cae4c;
+}
+
+#oneall .oneall_box_teaser .oneall_box_contents {
+	border: 0 none;
+	padding: 0 15px 15px 15px;
+}
+
+#oneall .oneall_box_teaser .oneall_box_section {
+	text-align: center;
+}
+
+#oneall .oneall_box_teaser .oneall_box_section_title {
+	color: #666;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 0 30px;
+	text-align: center;
+}
+
+/* ============ FORM */
+#oneall .oneall_form {
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding: 0 15px;
+}
+
+#oneall .oneall_form_row {
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+}
+
+#oneall .oneall_form_row.oneall_form_row_divided {
+	border-top: 2px solid #f3f3f3;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
+#oneall .oneall_form_row .oneall_form_col {
+	line-height: 28px;
+}
+
+#oneall .oneall_form_row label {
+	font-weight: bold;
+	vertical-align: top;
+}
+
+#oneall .oneall_form_row .oneall_form_col_30 {
+	width: 30%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_50 {
+	width: 50%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_70 {
+	width: 70%;
+	float: left;
+}
+
+#oneall .oneall_form_row_buttons {
+	text-align: center;
+}
+
+#oneall .oneall_form_note {
+	color: #31708f;
+	font-size: 12px;
+}
+
+#oneall .oneall_form_field {
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	color: #555;
+	display: block;
+	font-size: 14px;
+	height: 28x;
+	line-height: 28px;
+	padding: 0 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	width: 100%;
+	margin: 0;
+}
+
+#oneall select.oneall_form_field {
+	-moz-appearance: none;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 25px;
+	outline: 0 none  !important;
+}
+
+#oneall select.oneall_form_field:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #555;
+}
+
+#oneall .oneall_form_field:focus {
+	border-color: #66afe9;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	outline: 0 none  !important;
+}
+
+#oneall #oneall_preview_outerbox {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	overflow: auto;
+	padding: 5px;
+}
+
+#oneall #oneall_preview_innerbox {
+	height: 150px;
+	width: 3048px;
+}
+
+#oneall .oneall_sharing_methods {
+	background-color: #fafafa;
+	border: 1px solid #eee;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 5px;
+}
+
+#oneall #oneall_sharing_methods_left {
+	margin-right: 10px;
+}
+
+#oneall #oneall_sharing_methods_right {
+	margin-left: 10px;
+}
+
+#oneall .oneall_sharing_methods_contents {
+	height: 550px;
+	overflow-y: scroll;
+	margin-top: 10px;
+	padding: 0 0 10px 10px;
+}
+
+#oneall .oneall_sharing_methods_contents::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+}
+
+#oneall .oneall_sharing_methods_contents::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .3);
+	box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_methods_title {
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	text-align: center;
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_method {
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	margin: 0 5px 5px 0;
+	overflow: hidden;
+	cursor: pointer;
+	opacity: 0.8;
+	color: #444;
+}
+#oneall .oneall_sharing_methods .oneall_sharing_method:hover{
+	opacity: 1;
+	color: #000;
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_method_service {
+	background-color: #e2f3db;
+	border: 1px solid #d1e4c1;
+}
+
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_service{
+	background-color: #efefef;
+	border-color: #dfdfdf;
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_method_addon {
+	background-color: #a0d5d6;
+	border: 1px solid #bccfac;
+}
+
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_addon{
+	background-color: #dfdfdf;
+	border-color: #cfcfcf;
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_method .oneall_sharing_method_mover {
+	width: 16px;
+	display: block;
+	float: right;
+	height: 28px;
+}
+
+#oneall .oneall_sharing_methods #oneall_sharing_methods_selected .oneall_sharing_method_mover {
+	background: url("../img/delete.png") no-repeat scroll 50% 50% transparent;
+}
+
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_mover {
+	background: url("../img/add.png") no-repeat scroll 50% 50% transparent;
+}
+

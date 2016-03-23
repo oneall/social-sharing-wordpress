@@ -5,9 +5,10 @@
  * @link		http://www.oneall.com
  * @package 	oa_social_sharing_icons
  */
+
+/* Social Sharing Translations */
 class oa_social_sharing_icons_i18n
 {
-
 	/**
 	 * Load the plugin text domain for translation.
 	 */

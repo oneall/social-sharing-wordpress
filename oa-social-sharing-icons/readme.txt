@@ -1,40 +1,94 @@
-=== Social Sharing Icons ===
-Contributors: Damien Zara
-Tags: social sharing, sharing icons, facebook, linkedin, google, twitter, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, share, sharing, icons
+=== Social Sharing Icons &amp; Share Buttons ===
+Contributors: Damien Zara, OneAll.com
+Tags: social sharing, social share, sharing icons, share icons, sharing buttons, share buttons, sharing plugin, share plugin, facebook share, facebook likes, floating share buttons, linkedin share, google share, twitter share, tweet button, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, icons, plugin, widget, shortcode
 Requires at least: 3.0
-Tested up to: 4.3.1
-Stable tag: 1.0
+Tested up to: 4.4.2
+Stable tag: 2.0
+ 
+Easy to use and 100% FREE Social Sharing Icons &amp; Share buttons for WordPress to allow people to share your posts and pages to 30+ social networks. 
 
-Allow your visitors to <strong>share content</strong> to 30+ social networks</strong>. Includes services like for example Facebook Likes, Twitter Tweets, Google Plus and LinkedIn sharing. 
 
 == Description ==
 
-This is a professionally developed and free Wordpress (BuddyPress compatible) plugin that allows your users to 
-easily share content directly from your blog to 30+ social networks. ncludes services like for example Facebook Likes, Twitter Tweets, Google Plus and LinkedIn sharing. 
-<br /><br />
+Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress. The OneAll sharing plugin allows your users to share comments, 
+purchases, reviews and other activities directly from your WordPress blog to their friends on multiple social networks! Prompt users to share content 
+and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic to your website. 
 
-<strong>Choose where to add the Social Sharing Icons:</strong>
+The plugin fully supports the Open Graph Tags for more effective and efficient sharing results! 
+
+
+<strong>30+ Social Networks to Choose From</strong>
 <ul>
- <li>Left Floating</li>
- <li>Right Floating</li>
- <li>Blog Header</li>
- <li>Blog Footer</li>
- <li>After Each Post</li>
- <li>In Your Sidebard</li>
- <li>Embed with a shortcode</li>
+	<li>Choose from over 30 social sharing networks to display on your blog.</li> 
+	<li>Add and arrange the social networks to create a custom collection of sharing options for your visitors.</li>
+	<li>Choose whether to display the network names and/or the individual or total share counts.</li>
+</ul>
+ 
+<strong>Sharing Icons &amp; Counters</strong>
+<ul>	
+	<li>Amazon</li>
+	<li>AOL</li>
+	<li>Baidu</li>
+	<li>Blogger</li>
+	<li>Buffer</li>
+	<li>Delicious</li>
+	<li>Digg</li>
+	<li>Draugiem</li>
+	<li>Email</li>
+	<li>Evernote</li>
+	<li>Facebook</li>
+	<li>Google Bookmarks</li>
+	<li>Google Plus</li>
+	<li>Hackernews</li>
+	<li>LinkedIn</li>
+	<li>Livejournal</li>
+	<li>Odnoklassniki</li>
+	<li>Pinterest</li>
+	<li>Pocket</li>
+	<li>Reddit</li>
+	<li>Renren</li>
+	<li>StumbleUpon</li>
+	<li>Tumblr</li>
+	<li>Twitter</li>
+	<li>VKontakte</li>
+	<li>Sina Weibo</li>
+	<li>Yahoo Mail</li>
 </ul>
 
-<strong>Social Sharing widget:</strong>
+<strong>Sharing Buttons</strong>
 <ul>
- <li>A sharing widget that you can easily attach to your sidebar is included!</li>
+	<li>Facebook Like Button</li>
+	<li>Google +1 Button</li>
+	<li>LinkedIn Share Button</li>
+	<li>Twitter Tweet Button</li>
+	<li>VKontakte Share Button</li>
 </ul>
 
+<strong>Easily Add Sharing Buttons to 10 Different Locations</strong>
+Add for example a floating sidebar which is a very common and effective way to add social sharing icons to any page on your WordPress blog. 
+Your can also place the sharing buttons either above the content area, below the content area, or in both locations. We have 
+included 10 different locations that can be enabled with a single mouse-click. Custom locations can be added by using shortcodes!
 
+<ul>
+	<li>Floating Left (All pages)</li> 
+	<li>Floating Right (All pages)</li> 
+	<li>Blog Header</li> 
+	<li>Blog Footer</li> 
+	<li>After Each Post</li>
+	<li>Above The Comments Form</li> 
+	<li>Below The Comments Form</li> 
+	<li>Dynamic Sidebar Top</li> 
+	<li>Dynamic Sidebar Bottom</li> 
+	<li>WordPress Credits</li>
+</ul> 
 
-With our Social Sharing Icons your users can share comments, purchases, reviews and other activities directly from your website to their friends on 
-multiple social networks! Prompt users to share content and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic 
-to your website. 
+<strong>Embed the Social Sharing icons as widget</strong>
+Place the sharing icons and buttons in any Widget area or use a shortcode to add them to any area in your content.
 
+<strong>30+ Themes, Clean, Customizable Design</strong>
+Choose between 30+ themes with  different colors, styles and sizes. No matter which theme you choose to display, your social buttons will look great.
+
+<strong>Who are we?</strong>
 Social Sharing is maintained by <a href="http://www.oneall.com">OneAll</a>, a technology company created in 2011 and offering a set of web-delivered
 tools and services for establishing and optimizing a site's connection with social networks and identity providers such as Facebook, Twitter, 
 Google, Yahoo!, LinkedIn, Paypal, Instagram amongst others.
@@ -44,7 +98,7 @@ Google, Yahoo!, LinkedIn, Paypal, Instagram amongst others.
 = Plugin Installation =
 1. Upload the plugin folder to the "/wp-content/plugins/" directory of your WordPress site,
 2. Activate the plugin through the 'Plugins' menu in WordPress,
-3. Visit the "Settings\Social Sharing Icons" administration page to setup the plugin. 
+3. Visit the "Social Sharing" administration page to setup the plugin. 
 
 = API Connection =
 The social network APIs are constantly changing and being updated. We monitor these changes and automatically 
@@ -86,7 +140,30 @@ It should work out of the box.
 Our support team answers your questions at:<br />
 http://support.oneall.com/forums/
 
+== Screenshots ==
+
+1. **Beveled Buttons** 
+2. **Beveled Buttons With Counters**
+3. **Flat Cornered Squares**
+4. **Flat Cornered Squares With Counters**
+5. **Flat Cornered Rectangles**
+6. **Flat Cornered Rectangles With Counters**
+7. **Flat Rounded Rectangles**
+8. **Flat Rounded Rectangles With Counters**
+9. **Flat Circles**
+10. **Flat Rounded Squares**
+11. **Flat Rounded Squares With Counters**
+
 == Changelog ==
 
 = 1.0 =
 * Initial release
+
+= 2.0 =
+* 20+ new social networks
+* 20+ new themes
+* Open Graph support added
+* 2 new positions added
+* Screenshots added
+* JavaScript optimized
+

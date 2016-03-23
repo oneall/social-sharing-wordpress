@@ -1,4 +1,4 @@
-div.oass_floating_sharing {
+.oneall_sharing_icons_floating {
     background-color: #E9E9E9;
     position: fixed;
 	top: 30%;
@@ -7,14 +7,31 @@ div.oass_floating_sharing {
 	margin: 0 auto;
 }
 
-div#oass_floating_left_sharing {
+.oneall_sharing_icons_floating_left {
     left: 0;
-}
-div#oass_floating_right_sharing {
-    right: 0;
+	border-radius: 0 3px 3px 0;
 }
 
-div.oass_floating_sharing .oas_btn {
+.oneall_sharing_icons_floating_right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.oneall_sharing_icons_floating .oas_btn {
    	float: left;
     clear: both;
+}
+
+.oneall_sharing_icons{
+	overflow:hidden;
+}
+
+.oneall_sharing_icons_sidebar{
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+	text-align:center;
+}
+
+.oneall_sharing_icons_sidebar .oas_box {
+	display: inline-block !important;	
 }

@@ -5,9 +5,10 @@
  * @link		http://www.oneall.com
  * @package 	oa_social_sharing_icons
  */
+
+/* Social Sharing Loader */
 class oa_social_sharing_icons_loader
 {
-	
 	/**
 	 * The array of actions registered with WordPress.
 	 */

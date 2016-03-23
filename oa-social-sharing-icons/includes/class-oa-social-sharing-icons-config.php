@@ -5,12 +5,281 @@
  * @link		http://www.oneall.com
  * @package 	oa_social_sharing_icons
  */
+
+/* Social Sharing Configuration */
 class oa_social_sharing_icons_config
 {
 	/**
-	 * Holds the instance of the configuration settings.
+	 * Sharing methods that can be used with the plugin.
+	 */
+	private static $methods = array(		
+		'amazon' => array(
+			'name' => 'Amazon',
+			'name_button' => 'Amazon',
+			'name_key' => 'amazon',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 1
+		),
+		'aol' => array(
+			'name' => 'AOL',
+			'name_button' => 'AOL',
+			'name_key' => 'aol',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 2
+		),
+		'baidu' => array(
+			'name' => 'Baidu',
+			'name_button' => 'Baidu',
+			'name_key' => 'baidu',
+			'type' => 'service',
+			'is_default' => '0', 
+			'order' => 3
+		),
+		'blogger' => array(
+			'name' => 'Blogger',
+			'name_button' => 'Blogger',
+			'name_key' => 'blogger',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 4
+		),
+		'buffer' => array(
+			'name' => 'Buffer',
+			'name_button' => 'Buffer',
+			'name_key' => 'buffer',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 5
+		),
+		'delicious' => array(
+			'name' => 'Delicious',
+			'name_button' => 'Delicious',
+			'name_key' => 'delicious',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 6
+		),
+		'digg' => array(
+			'name' => 'Digg',
+			'name_button' => 'Digg',
+			'name_key' => 'digg',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 7
+		),
+		'draugiem' => array(
+			'name' => 'Draugiem',
+			'name_button' => 'Draugiem',
+			'name_key' => 'draugiem',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 8
+		),
+		'email' => array(
+			'name' => 'Email',
+			'name_button' => 'Email',
+			'name_key' => 'email',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 9
+		),
+		'evernote' => array(
+			'name' => 'Evernote',
+			'name_button' => 'Evernote',
+			'name_key' => 'evernote',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 10
+		),
+		'facebook' => array(
+			'name' => 'Facebook',
+			'name_button' => 'Facebook',
+			'name_key' => 'facebook',
+			'type' => 'service',
+			'is_default' => '1' ,
+			'order' => 11
+		),
+		'google_bookmarks' => array(
+			'name' => 'Google Bookmarks',
+			'name_button' => 'Google',
+			'name_key' => 'google_bookmarks',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 12
+		),
+		'google_plus' => array(
+			'name' => 'Google Plus',
+			'name_button' => 'Google',
+			'name_key' => 'google_plus',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 13
+		),
+		'hackernews' => array(
+			'name' => 'Hackernews',
+			'name_button' => 'Hackernews',
+			'name_key' => 'hackernews',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 14
+		),
+		'linkedin' => array(
+			'name' => 'LinkedIn',
+			'name_button' => 'LinkedIn',
+			'name_key' => 'linkedin',
+			'type' => 'service',
+			'is_default' => '1',
+			'order' => 15
+		),
+		'livejournal' => array(
+			'name' => 'Livejournal',
+			'name_button' => 'Livejournal',
+			'name_key' => 'livejournal',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 16
+		),
+		'odnoklassniki' => array(
+			'name' => 'Odnoklassniki',
+			'name_button' => 'Odnoklassniki',
+			'name_key' => 'odnoklassniki',
+			'type' => 'service',
+			'is_default' => '0' ,
+			'order' => 17
+		),
+		'pinterest' => array(
+			'name' => 'Pinterest',
+			'name_button' => 'Pinterest',
+			'name_key' => 'pinterest',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 18
+		),
+		'pocket' => array(
+			'name' => 'Pocket',
+			'name_button' => 'Pocket',
+			'name_key' => 'pocket',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 19
+		),
+		'reddit' => array(
+			'name' => 'Reddit',
+			'name_button' => 'Reddit',
+			'name_key' => 'reddit',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 20
+		),
+		'renren' => array(
+			'name' => 'Renren',
+			'name_button' => 'Renren',
+			'name_key' => 'renren',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 21
+		),
+		'stumbleupon' => array(
+			'name' => 'StumbleUpon',
+			'name_button' => 'StumbleUpon',
+			'name_key' => 'stumbleupon',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 22
+		),
+		'tumblr' => array(
+			'name' => 'Tumblr',
+			'name_button' => 'Tumblr',
+			'name_key' => 'tumblr',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 23
+		),
+		'twitter' => array(
+			'name' => 'Twitter',
+			'name_button' => 'Twitter',
+			'name_key' => 'twitter',
+			'type' => 'service',
+			'is_default' => '1',
+			'order' => 24
+		),
+		'vkontakte' => array(
+			'name' => 'VKontakte',
+			'name_button' => 'В Контакте',
+			'name_key' => 'vkontakte',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 25
+		),
+		'weibo' => array(
+			'name' => 'Sina Weibo',
+			'name_button' => 'Weibo',
+			'name_key' => 'weibo',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 26
+		),
+		'yahoomail' => array(
+			'name' => 'Yahoo Mail',
+			'name_button' => 'Yahoo Mail',
+			'name_key' => 'yahoomail',
+			'type' => 'service',
+			'is_default' => '0',
+			'order' => 27
+		),
+		'facebook_like_but' => array(
+			'name' => 'Facebook Like Button',
+			'name_button' => 'Facebook',
+			'name_key' => 'facebook_like_but',
+			'type' => 'addon',
+			'is_default' => '0',
+			'order' => 101
+		),
+		'google_plus_one_but' => array(
+			'name' => 'Google +1 Button',
+			'name_button' => 'Google',
+			'name_key' => 'google_plus_one_but',
+			'type' => 'addon',
+			'is_default' => '0',
+			'order' => 102
+		),
+		'linkedin_share_but' => array(
+			'name' => 'LinkedIn Share Button',
+			'name_button' => 'LinkedIn',
+			'name_key' => 'linkedin_share_but',
+			'type' => 'addon',
+			'is_default' => '0',
+			'order' => 103
+		),
+		'twitter_tweet_but' => array(
+			'name' => 'Twitter Tweet Button',
+			'name_button' => 'Twitter',
+			'name_key' => 'twitter_tweet_but',
+			'type' => 'addon',
+			'is_default' => '0',
+			'order' => 104
+		),
+		'vkontakte_share_but' => array(
+			'name' => 'VKontakte Share Button',
+			'name_button' => 'В Контакте',
+			'name_key' => 'vkontakte_share_but',
+			'type' => 'addon',
+			'is_default' => '0',
+			'order' => 105
+		) 
+	);
+	
+	/**
+	 * Holds the instance of this class.
 	 */
 	private static $instance = null;
+	
+	/**
+	 * Holds the plugin settings.
+	 */
+	private $settings = null;
 	
 	/**
 	 * The unique identifier of this plugin.
@@ -20,22 +289,7 @@ class oa_social_sharing_icons_config
 	/**
 	 * The current version of the plugin.
 	 */
-	public $version = '1.0.0';
-
-	/**
-	 * Add Hooks
-	 */
-	private function __construct ()
-	{
-		add_action ('wp_head', array(
-			$this,
-			'get_oa_library_js' 
-		));
-		add_action ('admin_head', array(
-			$this,
-			'get_oa_library_js_admin' 
-		));
-	}
+	public $plugin_version = '2.0';
 
 	/**
 	 * Returns the instance
@@ -59,70 +313,266 @@ class oa_social_sharing_icons_config
 	}
 
 	/**
-	 * The plugin versopn.
+	 * The plugin version.
 	 */
-	public function get_version ()
+	public function get_plugin_version ()
 	{
-		return $this->version;
+		return $this->plugin_version;
 	}
-
+	
+	// /////////////////////////////////////////////////////////////////////////////////////////////
+	// SETTINGS
+	// /////////////////////////////////////////////////////////////////////////////////////////////
+	
 	/**
-	 * Displays the OneAll library in the admin setup area.
+	 * Return the settings
 	 */
-	public function get_oa_library_js_admin ()
+	public function get_settings ($reload = false)
 	{
-		$this->get_oa_library_js (false);
-	}
-
-	/**
-	 * Adds the OneAll libray to the public website
-	 */
-	public function get_oa_library_js ($check_duplicate = true)
-	{
-		// Get Subdomain
-		$api_subdomain = $this->get_user_subdomain () . ".api.oneall.com";
-		
-		if (!empty ($api_subdomain))
+		if (!is_array ($this->settings) || $reload === true)
 		{
-			if (!$check_duplicate || !$this->is_same_subdomain_social_login ())
+			// Read Settings
+			$this->settings = get_option ('oa_social_sharing_icons_settings');
+			
+			// We have no settings yet
+			if ( ! is_array ($this->settings))
 			{
-				echo "<script type='text/javascript'>
-						var oa = document.createElement('script');
-						oa.type = 'text/javascript'; oa.async = true;
-						oa.src = '//" . $api_subdomain . "/socialize/library.js'
-						var s = document.getElementsByTagName('script')[0];
-						s.parentNode.insertBefore(oa, s)
-					</script>
-				";
+				$this->settings = array();
+			}
+	
+			// Wrapper for old properties
+			if (isset ($this->settings['wizard_final_choice']))
+			{		
+				// Decode
+				$settings = @json_decode ($this->settings ['wizard_final_choice']);	
+
+				// Make sure we have the correct format
+				if (is_object ($settings))
+				{							
+					// Default Size
+					if ( ! empty ($settings->default_size))
+					{
+						// Convert to new format
+						$this->settings['default_size'] = $settings->default_size;
+					}
+					
+					// Selected Methods
+					if (isset ($settings->methods) && is_array ($settings->methods))
+					{
+						$enabled_methods = array();
+						
+						foreach ($settings->methods AS $method)
+						{						
+							if (is_object ($method) && ! empty ($method->key))
+							{
+								$enabled_methods[] = $method->key;
+							}
+						}		
+
+						// Convert to new format
+						$this->settings['enabled_methods'] = $enabled_methods;
+					}
+					
+					// Positions
+					$properties = get_object_vars ($settings);
+					
+					// Make sure we have the correct format
+					if (is_array ($properties))
+					{
+						$positions = array();
+						
+						foreach ($properties AS $property => $value)
+						{
+							if (preg_match ('#^position_([a-z_]+)$#', $property, $matches))
+							{
+								$positions[$matches[1]] = $value;
+							}	
+						}
+						
+						// Convert to new format
+						$this->settings['positions'] = $positions;
+					}			
+				}	
+
+
+				// Remove from Settings
+				unset ($this->settings['wizard_final_choice']);	
+				
+				// Update Options	
+				wp_cache_delete ('alloptions', 'options');
+				delete_option ('oa_social_sharing_icons_settings');
+				update_option ('oa_social_sharing_icons_settings', $this->settings, true);
+				wp_cache_delete ('alloptions', 'options');
 			}
 		}
+
+		return $this->settings;
 	}
 
 	/**
-	 * Returns the subdomain stored in the config.
+	 * Return the subdomain setting
 	 */
-	public function get_user_subdomain ()
+	public function get_api_subdomain ($reload = false, $full_domain = false)
 	{
-		$settings_sharing = get_option ('oa_social_sharing_icons_settings');
-		return empty ($settings_sharing ['api_subdomain']) ? null : $settings_sharing ['api_subdomain'];
+		$settings = $this->get_settings ($reload);
+		
+		$api_subdomain = '';
+		
+		if ( ! empty ($settings ['api_subdomain']))
+		{
+			if ($full_domain)
+			{
+				$api_subdomain = $settings ['api_subdomain'].'.api.oneall.com';
+			}
+			else
+			{
+				$api_subdomain = $settings ['api_subdomain'];
+			}
+		}
+		
+		return $api_subdomain;
+	}
+	
+	/**
+	 * Return the default size
+	 */
+	public function get_default_size ($reload = false)
+	{
+		$settings = $this->get_settings ($reload);
+		return (isset ($settings ['default_size']) ? $settings ['default_size'] : 'btns_m');
 	}
 
 	/**
-	 * Checks if Social Login is installed and it it's OneAll subdomain is indentical to the Sharing Icons subdomain.
+	 * Return the disable_og_tags setting
 	 */
-	public function is_same_subdomain_social_login ()
+	public function get_disable_og_tags ($reload = false)
 	{
-		$settings_login = get_option ('oa_social_login_settings');
-		$social_login_subdomain = (!empty ($settings_login ['api_subdomain']) ? $settings_login ['api_subdomain'] : '');
-		$social_sharing_subdomain = $this->get_user_subdomain ();
-		return ($social_login_subdomain == $social_sharing_subdomain);
+		$settings = $this->get_settings ($reload);
+		return (!empty ($settings ['disable_og_tags']) ? 1 : 0);
 	}
 
 	/**
-	 * Checks if Social Login is installed and configurated.
+	 * Return the positions setting
 	 */
-	public function existing_social_login_config ()
+	public function get_positions ($reload = false)
 	{
-		return (!empty (get_option ('oa_social_login_settings')));
+		$settings = $this->get_settings ($reload);
+		
+		// Setup Positions		
+		if (isset ($settings ['positions']) && is_array ($settings ['positions']))
+		{
+			$positions = $settings ['positions'];	
+		}
+		else
+		{
+			$positions = array();
+		}
+		
+		return $positions;
+	}
+
+	/**
+	 * Return the button_text setting
+	 */
+	public function get_button_text ($reload = false)
+	{
+		$settings = $this->get_settings ($reload);
+		
+		// Default Text
+		if ( ! isset ($settings ['button_text']))
+		{
+			$button_text = 'Share On %provider.name%';
+		}
+		// Custom Text
+		else
+		{
+			// No Text Specified
+			if (empty ($settings ['button_text']))
+			{
+				$button_text = '%provider.name%';
+			}
+			// Custom Text Specified
+			else
+			{
+				$button_text = $settings ['button_text'];
+			}
+		}
+		
+		return $button_text;
+	}
+
+	/**
+	 * Return the list of methods
+	 */
+	public function get_all_methods ()
+	{
+		return self::$methods;
+	}
+	
+	/**
+	 * Return the list of enabled methods
+	 */
+	public function get_enabled_methods ($reload = false, $all_properties = false)
+	{
+		$settings = $this->get_settings ($reload);
+		
+		// Setup enabled methods		
+		if (isset ($settings ['enabled_methods']) && is_array ($settings ['enabled_methods']))
+		{
+			$enabled_methods = $settings ['enabled_methods'];			
+		}
+		else
+		{
+			$enabled_methods = array();
+		}
+		
+		// Full list with all properties
+		if (count ($enabled_methods) > 0)
+		{
+			if ($all_properties === true)
+			{
+				$full_methods = array();
+				
+				foreach ($enabled_methods AS $method_key)
+				{
+					if (isset (self::$methods[$method_key]))
+					{
+						$full_methods [$method_key] = self::$methods[$method_key];
+					}
+				}
+								
+				$enabled_methods = $full_methods;
+			}
+		}
+	
+		return $enabled_methods;
+	}
+
+	/**
+	 * Return the list of disabled methods
+	 */
+	public function get_disabled_methods ($reload = false)
+	{
+		$settings = $this->get_settings ($reload);
+		
+		$enabled_methods = $this->get_enabled_methods ();
+		$disabled_methods = array();
+		
+		if (count ($enabled_methods) == 0)
+		{
+			$disabled_methods = array_keys (self::$methods);
+		}
+		else
+		{
+			foreach (self::$methods AS $method_key => $method_data)
+			{
+				if (!in_array ($method_key, $enabled_methods))
+				{
+					$disabled_methods [] = $method_key;
+				}
+			}
+		}
+		
+		return $disabled_methods;
 	}
 }
