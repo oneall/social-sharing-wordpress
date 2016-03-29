@@ -47,7 +47,7 @@
 							</div>
 						</div>	
 						<div class="oneall_form_row oneall_form_row_buttons">	
-							<input type="hidden" name="page" value="setup" />
+							<input type="hidden" name="page" value="setup" />									
 							<input id="save_user_choice" type="submit" class="oneall_btn oneall_btn_success" value="<?php _e ('Get Started', 'oa-social-sharing-icons') ?>" />
 						</div>				
 					</div>		

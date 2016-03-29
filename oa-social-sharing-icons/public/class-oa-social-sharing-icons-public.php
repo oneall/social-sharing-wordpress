@@ -294,7 +294,23 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 				
 				foreach ($enabled_methods as $method_data)
 				{
-					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method_data['name_key'] . '" title="' . str_replace ('%provider.name%', $method_data['name'], $button_text) . '"></span>';
+					switch ($method_data['name_key'])
+					{
+						case 'email':
+							$social_sharing_block_title = $method_data['name'];
+						break;
+						
+						case 'counter':
+							$social_sharing_block_title = '';
+						break;
+						
+						default:
+							$social_sharing_block_title = str_replace ('%provider.name%', $method_data['name'], $button_text);
+						break;
+							
+					}
+								
+					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method_data['name_key'] . '" title="' . $social_sharing_block_title . '"></span>';
 				}
 				
 				$social_sharing_block .= '</span>';

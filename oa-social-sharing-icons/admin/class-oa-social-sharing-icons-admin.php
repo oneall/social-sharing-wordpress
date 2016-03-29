@@ -126,66 +126,68 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	 * Generate select options.
 	 */
 	public static function print_select_position_options ($disabled_allowed = true, $option = null, $options = array())
-	{
-	
+	{	
 		$positions = array(
 			"Default" => array(
 				"disabled" => __ ("Do not display", 'oa-social-sharing-icons'),
 				"default" => __ ("Default Buttons", 'oa-social-sharing-icons') 
 			),
-			"Beveled Buttons" => array(
-				"btns_s" => __ ("Small", 'oa-social-sharing-icons'),
-				"btns_m" => __ ("Medium", 'oa-social-sharing-icons'),
-				"btns_l" => __ ("Large", 'oa-social-sharing-icons') 
+			"Beveled Squares" => array(
+				"btns_s" => __ ("Beveled Squares (Small, Colored)", 'oa-social-sharing-icons'),
+				"count_h" => __ ("Beveled Squares (Small, Colored, Horizontal Counters)", 'oa-social-sharing-icons'),
+				"count_v" => __ ("Beveled Squares (Small, Colored, Vertical Counters)", 'oa-social-sharing-icons'),
+				"btns_m" => __ ("Beveled Squares (Medium, Colored)", 'oa-social-sharing-icons'),
+				"btns_l" => __ ("Beveled Squares (Large, Colored)", 'oa-social-sharing-icons') 
+			),	
+			"Flat Rectangles" => array(
+				"btns_hf" => __ ("Flat Rectangles (Colored)", 'class-oa-social-sharing-icons'),
+				"btns_hf_b" => __ ("Flat Rectangles (Black)", 'class-oa-social-sharing-icons'),
+				"btns_hf_g" => __ ("Flat Rectangles (Grey)", 'class-oa-social-sharing-icons') 
 			),
-			"Beveled Buttons +Counters" => array(
-				"count_h" => __ ("Horizontal", 'oa-social-sharing-icons'),
-				"count_v" => __ ("Vertical", 'oa-social-sharing-icons') 
-			),
-			"Flat Cornered Rectangles" => array(
-				"btns_hf" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_hf_b" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_hf_g" => __ ("Gray", 'class-oa-social-sharing-icons') 
-			),
-			"Flat Cornered Rectangles +Counters" => array(
-				"btns_hf_count" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_hf_b_count" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_hf_g_count" => __ ("Gray", 'class-oa-social-sharing-icons') 
+			"Flat Rectangles With Counters" => array(
+				"btns_hf_count" => __ ("Flat Rectangles (Colored, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_hf_b_count" => __ ("Flat Rectangles (Black, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_hf_g_count" => __ ("Flat Rectangles (Grey, Counters)", 'class-oa-social-sharing-icons') 
 			),
 			"Flat Rounded Rectangles" => array(
-				"btns_hfrr" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_hfrr_b" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_hfrr_g" => __ ("Gray", 'class-oa-social-sharing-icons') 
+				"btns_hfrr" => __ ("Flat Rectangles (Colored, Rounded)", 'class-oa-social-sharing-icons'),
+				"btns_hfrr_b" => __ ("Flat Rectangles (Black, Rounded)", 'class-oa-social-sharing-icons'),
+				"btns_hfrr_g" => __ ("Flat Rectangles (Grey, Rounded)", 'class-oa-social-sharing-icons') 
 			),
-			"Flat Rounded Rectangles +Counters" => array(
-				"btns_hfrr_count" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_hfrr_b_count" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_hfrr_g_count" => __ ("Gray", 'class-oa-social-sharing-icons') 
+			"Flat Rounded Rectangles With Counters" => array(
+				"btns_hfrr_count" => __ ("Flat Rectangles (Colored, Rounded, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_hfrr_b_count" => __ ("Flat Rectangles (Black, Rounded, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_hfrr_g_count" => __ ("Flat Rectangles (Grey, Rounded, Counters)", 'class-oa-social-sharing-icons') 
 			),
-			"Flat Cornered Squares" => array(
-				"btns_lf" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_lf_b" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_lf_g" => __ ("Gray", 'class-oa-social-sharing-icons') 
-			),
-			"Flat Cornered Squares +Counters" => array(
-				"btns_lf_count" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_lf_b_count" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_lf_g_count" => __ ("Gray", 'class-oa-social-sharing-icons') 
+			"Flat Blocks Without Margin" => array(
+				"btns_lfnm" => __ ("Flat Blocks (Colored, No Margin)", 'class-oa-social-sharing-icons'),
+				"btns_lfnm_b" => __ ("Flat Blocks (Black, No Margin)", 'class-oa-social-sharing-icons'),
+				"btns_lfnm_g" => __ ("Flat Blocks (Grey, No Margin)", 'class-oa-social-sharing-icons')
 			),
 			"Flat Circles" => array(
-				"btns_lfr" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_lfr_b" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_lfr_g" => __ ("Gray", 'class-oa-social-sharing-icons') 
+				"btns_lfr" => __ ("Flat Circles (Colored)", 'class-oa-social-sharing-icons'),
+				"btns_lfr_b" => __ ("Flat Circles (Black)", 'class-oa-social-sharing-icons'),
+				"btns_lfr_g" => __ ("Flat Circles (Grey)", 'class-oa-social-sharing-icons')
+			),
+			"Flat Squares" => array(
+				"btns_lf" => __ ("Flat Squares (Colored)", 'class-oa-social-sharing-icons'),
+				"btns_lf_b" => __ ("Flat Squares (Black)", 'class-oa-social-sharing-icons'),
+				"btns_lf_g" => __ ("Flat Squares (Grey)", 'class-oa-social-sharing-icons') 
+			),
+			"Flat Squares With Counters" => array(
+				"btns_lf_count" => __ ("Flat Squares (Colored, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_lf_b_count" => __ ("Flat Squares (Black, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_lf_g_count" => __ ("Flat Squares (Grey, Counters)", 'class-oa-social-sharing-icons')
 			),
 			"Flat Rounded Squares" => array(
-				"btns_lfrr" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_lfrr_b" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_lfrr_g" => __ ("Gray", 'class-oa-social-sharing-icons') 
+				"btns_lfrr" => __ ("Flat Squares (Colored, Rounded)", 'class-oa-social-sharing-icons'),
+				"btns_lfrr_b" => __ ("Flat Squares (Black, Rounded)", 'class-oa-social-sharing-icons'),
+				"btns_lfrr_g" => __ ("Flat Squares (Grey, Rounded)", 'class-oa-social-sharing-icons')
 			),
-			"Flat Rounded Squares +Counters" => array(
-				"btns_lfrr_count" => __ ("Colored", 'class-oa-social-sharing-icons'),
-				"btns_lfrr_b_count" => __ ("Black", 'class-oa-social-sharing-icons'),
-				"btns_lfrr_g_count" => __ ("Gray", 'class-oa-social-sharing-icons') 
+			"Flat Rounded Squares With Counters" => array(
+				"btns_lfrr_count" => __ ("Flat Squares (Colored, Rounded, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_lfrr_b_count" => __ ("Flat Squares (Black, Rounded, Counters)", 'class-oa-social-sharing-icons'),
+				"btns_lfrr_g_count" => __ ("Flat Squares (Grey, Rounded, Counters)", 'class-oa-social-sharing-icons') 
 			) 
 		);
 		
@@ -283,6 +285,14 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		{
 			$sanitized_settings ['enabled_methods'] = $settings ['enabled_methods'];
 		}	
+		else
+		{
+			// Default Methods
+			if ( ! empty ($_REQUEST['page']) && $_REQUEST['page'] == 'setup')
+			{
+				$sanitized_settings ['enabled_methods'] = array('facebook', 'twitter', 'linkedin', 'google_plus', 'email', 'counter');
+			}
+		}
 		
 		// Enabled Sharing Methods - Form
 		if (isset ($settings ['enabled_methods_keys']) && is_array ($settings ['enabled_methods_keys']))

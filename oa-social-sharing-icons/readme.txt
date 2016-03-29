@@ -3,7 +3,7 @@ Contributors: Damien Zara, OneAll.com
 Tags: social sharing, social share, sharing icons, share icons, sharing buttons, share buttons, sharing plugin, share plugin, facebook share, facebook likes, floating share buttons, linkedin share, google share, twitter share, tweet button, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, icons, plugin, widget, shortcode
 Requires at least: 3.0
 Tested up to: 4.4.2
-Stable tag: 2.0
+Stable tag: 2.1
  
 Easy to use and 100% FREE Social Sharing Icons &amp; Share buttons for WordPress to allow people to share your posts and pages to 30+ social networks. 
 
@@ -167,3 +167,7 @@ http://support.oneall.com/forums/
 * Screenshots added
 * JavaScript optimized
 
+= 2.1 =
+* Flat Blocks Theme Added
+* Sharing Counters Added
+* Unnecessary JavaScript removed

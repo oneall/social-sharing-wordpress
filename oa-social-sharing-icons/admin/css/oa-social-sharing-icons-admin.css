@@ -256,22 +256,23 @@
 
 #oneall select.oneall_form_field {
 	-moz-appearance: none;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	background-image:
+		url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
 	background-position: right center;
 	background-repeat: no-repeat;
 	padding-right: 25px;
-	outline: 0 none  !important;
+	outline: 0 none !important;
 }
 
 #oneall select.oneall_form_field:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #555;
+	color: transparent;
+	text-shadow: 0 0 0 #555;
 }
 
 #oneall .oneall_form_field:focus {
 	border-color: #66afe9;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-	outline: 0 none  !important;
+	outline: 0 none !important;
 }
 
 #oneall #oneall_preview_outerbox {
@@ -337,7 +338,8 @@
 	opacity: 0.8;
 	color: #444;
 }
-#oneall .oneall_sharing_methods .oneall_sharing_method:hover{
+
+#oneall .oneall_sharing_methods .oneall_sharing_method:hover {
 	opacity: 1;
 	color: #000;
 }
@@ -347,7 +349,7 @@
 	border: 1px solid #d1e4c1;
 }
 
-#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_service{
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_service {
 	background-color: #efefef;
 	border-color: #dfdfdf;
 }
@@ -357,9 +359,19 @@
 	border: 1px solid #bccfac;
 }
 
-#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_addon{
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_addon {
 	background-color: #dfdfdf;
 	border-color: #cfcfcf;
+}
+
+#oneall .oneall_sharing_methods .oneall_sharing_method_counter {
+	background-color: #fbf7e2;
+	border: 1px solid #ecddbe;
+}
+
+#oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_counter {
+	background-color: #dfdfdf;
+	border: 1px solid #ccc;
 }
 
 #oneall .oneall_sharing_methods .oneall_sharing_method .oneall_sharing_method_mover {
@@ -376,4 +388,3 @@
 #oneall .oneall_sharing_methods #oneall_sharing_methods_available .oneall_sharing_method_mover {
 	background: url("../img/add.png") no-repeat scroll 50% 50% transparent;
 }
-

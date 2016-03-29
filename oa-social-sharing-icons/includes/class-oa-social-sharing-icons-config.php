@@ -13,13 +13,21 @@ class oa_social_sharing_icons_config
 	 * Sharing methods that can be used with the plugin.
 	 */
 	private static $methods = array(		
+		'counter' => array(
+			'name' => 'Total Shares Counter',
+			'name_button' => 'Shares',
+			'name_key' => 'counter',
+			'type' => 'counter',
+			'is_default' => '1',
+			'order' => 1
+		),
 		'amazon' => array(
 			'name' => 'Amazon',
 			'name_button' => 'Amazon',
 			'name_key' => 'amazon',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 1
+			'order' => 10
 		),
 		'aol' => array(
 			'name' => 'AOL',
@@ -27,7 +35,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'aol',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 2
+			'order' => 20
 		),
 		'baidu' => array(
 			'name' => 'Baidu',
@@ -35,7 +43,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'baidu',
 			'type' => 'service',
 			'is_default' => '0', 
-			'order' => 3
+			'order' => 30
 		),
 		'blogger' => array(
 			'name' => 'Blogger',
@@ -43,7 +51,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'blogger',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 4
+			'order' => 40
 		),
 		'buffer' => array(
 			'name' => 'Buffer',
@@ -51,7 +59,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'buffer',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 5
+			'order' => 50
 		),
 		'delicious' => array(
 			'name' => 'Delicious',
@@ -59,7 +67,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'delicious',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 6
+			'order' => 60
 		),
 		'digg' => array(
 			'name' => 'Digg',
@@ -67,7 +75,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'digg',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 7
+			'order' => 70
 		),
 		'draugiem' => array(
 			'name' => 'Draugiem',
@@ -75,15 +83,15 @@ class oa_social_sharing_icons_config
 			'name_key' => 'draugiem',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 8
+			'order' => 80
 		),
 		'email' => array(
 			'name' => 'Email',
 			'name_button' => 'Email',
 			'name_key' => 'email',
 			'type' => 'service',
-			'is_default' => '0',
-			'order' => 9
+			'is_default' => '1',
+			'order' => 90
 		),
 		'evernote' => array(
 			'name' => 'Evernote',
@@ -91,7 +99,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'evernote',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 10
+			'order' => 100
 		),
 		'facebook' => array(
 			'name' => 'Facebook',
@@ -99,7 +107,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'facebook',
 			'type' => 'service',
 			'is_default' => '1' ,
-			'order' => 11
+			'order' => 110
 		),
 		'google_bookmarks' => array(
 			'name' => 'Google Bookmarks',
@@ -107,7 +115,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'google_bookmarks',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 12
+			'order' => 120
 		),
 		'google_plus' => array(
 			'name' => 'Google Plus',
@@ -115,7 +123,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'google_plus',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 13
+			'order' => 130
 		),
 		'hackernews' => array(
 			'name' => 'Hackernews',
@@ -123,7 +131,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'hackernews',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 14
+			'order' => 140
 		),
 		'linkedin' => array(
 			'name' => 'LinkedIn',
@@ -131,7 +139,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'linkedin',
 			'type' => 'service',
 			'is_default' => '1',
-			'order' => 15
+			'order' => 150
 		),
 		'livejournal' => array(
 			'name' => 'Livejournal',
@@ -139,7 +147,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'livejournal',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 16
+			'order' => 160
 		),
 		'odnoklassniki' => array(
 			'name' => 'Odnoklassniki',
@@ -147,7 +155,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'odnoklassniki',
 			'type' => 'service',
 			'is_default' => '0' ,
-			'order' => 17
+			'order' => 170
 		),
 		'pinterest' => array(
 			'name' => 'Pinterest',
@@ -155,7 +163,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'pinterest',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 18
+			'order' => 180
 		),
 		'pocket' => array(
 			'name' => 'Pocket',
@@ -163,7 +171,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'pocket',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 19
+			'order' => 190
 		),
 		'reddit' => array(
 			'name' => 'Reddit',
@@ -171,7 +179,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'reddit',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 20
+			'order' => 200
 		),
 		'renren' => array(
 			'name' => 'Renren',
@@ -179,7 +187,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'renren',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 21
+			'order' => 210
 		),
 		'stumbleupon' => array(
 			'name' => 'StumbleUpon',
@@ -187,7 +195,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'stumbleupon',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 22
+			'order' => 220
 		),
 		'tumblr' => array(
 			'name' => 'Tumblr',
@@ -195,7 +203,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'tumblr',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 23
+			'order' => 230
 		),
 		'twitter' => array(
 			'name' => 'Twitter',
@@ -203,7 +211,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'twitter',
 			'type' => 'service',
 			'is_default' => '1',
-			'order' => 24
+			'order' => 240
 		),
 		'vkontakte' => array(
 			'name' => 'VKontakte',
@@ -211,7 +219,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'vkontakte',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 25
+			'order' => 250
 		),
 		'weibo' => array(
 			'name' => 'Sina Weibo',
@@ -219,7 +227,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'weibo',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 26
+			'order' => 260
 		),
 		'yahoomail' => array(
 			'name' => 'Yahoo Mail',
@@ -227,7 +235,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'yahoomail',
 			'type' => 'service',
 			'is_default' => '0',
-			'order' => 27
+			'order' => 270
 		),
 		'facebook_like_but' => array(
 			'name' => 'Facebook Like Button',
@@ -235,7 +243,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'facebook_like_but',
 			'type' => 'addon',
 			'is_default' => '0',
-			'order' => 101
+			'order' => 1010
 		),
 		'google_plus_one_but' => array(
 			'name' => 'Google +1 Button',
@@ -243,7 +251,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'google_plus_one_but',
 			'type' => 'addon',
 			'is_default' => '0',
-			'order' => 102
+			'order' => 1020
 		),
 		'linkedin_share_but' => array(
 			'name' => 'LinkedIn Share Button',
@@ -251,7 +259,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'linkedin_share_but',
 			'type' => 'addon',
 			'is_default' => '0',
-			'order' => 103
+			'order' => 1030
 		),
 		'twitter_tweet_but' => array(
 			'name' => 'Twitter Tweet Button',
@@ -259,7 +267,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'twitter_tweet_but',
 			'type' => 'addon',
 			'is_default' => '0',
-			'order' => 104
+			'order' => 1040
 		),
 		'vkontakte_share_but' => array(
 			'name' => 'VKontakte Share Button',
@@ -267,7 +275,7 @@ class oa_social_sharing_icons_config
 			'name_key' => 'vkontakte_share_but',
 			'type' => 'addon',
 			'is_default' => '0',
-			'order' => 105
+			'order' => 1050
 		) 
 	);
 	
@@ -289,7 +297,7 @@ class oa_social_sharing_icons_config
 	/**
 	 * The current version of the plugin.
 	 */
-	public $plugin_version = '2.0';
+	public $plugin_version = '2.1';
 
 	/**
 	 * Returns the instance
@@ -439,7 +447,7 @@ class oa_social_sharing_icons_config
 	public function get_default_size ($reload = false)
 	{
 		$settings = $this->get_settings ($reload);
-		return (isset ($settings ['default_size']) ? $settings ['default_size'] : 'btns_m');
+		return (isset ($settings ['default_size']) ? $settings ['default_size'] : 'btns_lfnm');
 	}
 
 	/**
@@ -518,11 +526,11 @@ class oa_social_sharing_icons_config
 		
 		// Setup enabled methods		
 		if (isset ($settings ['enabled_methods']) && is_array ($settings ['enabled_methods']))
-		{
-			$enabled_methods = $settings ['enabled_methods'];			
+		{		
+				$enabled_methods = $settings ['enabled_methods'];			
 		}
 		else
-		{
+		{	
 			$enabled_methods = array();
 		}
 		

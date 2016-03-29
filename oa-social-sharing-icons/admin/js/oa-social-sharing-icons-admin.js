@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
 		}
 		
 		/* All Layouts */
-		valid_layouts = ["btns_s", "btns_m", "btns_l", "count_h", "count_v", "btns_hf", "btns_hf_b", "btns_hf_g", "btns_hf_count", "btns_hf_b_count", "btns_hf_g_count", "btns_hfrr", "btns_hfrr_b", "btns_hfrr_g", "btns_hfrr_count", "btns_hfrr_b_count", "btns_hfrr_g_count", "btns_lf", "btns_lf_b", "btns_lf_g", "btns_lf_count", "btns_lf_b_count", "btns_lf_g_count", "btns_lfr", "btns_lfr_b", "btns_lfr_g", "btns_lfrr", "btns_lfrr_b", "btns_lfrr_g", "btns_lfrr_count", "btns_lfrr_b_count", "btns_lfrr_g_count"];
+		valid_layouts = ["btns_lfnm", "btns_lfnm_g", "btns_lfnm_b", "btns_s", "btns_m", "btns_l", "count_h", "count_v", "btns_hf", "btns_hf_b", "btns_hf_g", "btns_hf_count", "btns_hf_b_count", "btns_hf_g_count", "btns_hfrr", "btns_hfrr_b", "btns_hfrr_g", "btns_hfrr_count", "btns_hfrr_b_count", "btns_hfrr_g_count", "btns_lf", "btns_lf_b", "btns_lf_g", "btns_lf_count", "btns_lf_b_count", "btns_lf_g_count", "btns_lfr", "btns_lfr_b", "btns_lfr_g", "btns_lfrr", "btns_lfrr_b", "btns_lfrr_g", "btns_lfrr_count", "btns_lfrr_b_count", "btns_lfrr_g_count"];
 
 		/* Default Button Design */
 		button_class = valid_layouts[0];
@@ -136,8 +136,22 @@ jQuery(document).ready(function($) {
 			button_provider_name = jQuery(this).attr('data-name');	
 			
 			/* Button Text */
-			button_provider_text = button_text;
-			button_provider_text = button_provider_text.replace ('%provider.name%', button_provider_name);		
+			if (button_provider_key == 'email')
+			{
+				button_provider_text = button_provider_name;
+			}
+			else
+			{
+				if (button_provider_key == 'counter')
+				{
+					button_provider_text = '';
+				}
+				else
+				{
+					button_provider_text = button_text;
+					button_provider_text = button_provider_text.replace ('%provider.name%', button_provider_name);
+				}
+			}
 
 			/* Add Provider to HTML */
 			html_code = html_code + ' <span class="oas_btn oas_btn_' + button_provider_key + '" title="' + button_provider_text + '"></span>';
