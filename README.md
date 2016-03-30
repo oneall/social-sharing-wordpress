@@ -2,7 +2,7 @@
 
 * Upload the folder **social-sharing-icons** to the **/wp-content/plugins/** directory of your WordPress site,
 * Activate the plugin through the **Plugins** menu in WordPress administration area,
-* Navigat to the **Social Sharing** administration page to setup the plugin.
+* Navigate to the **Social Sharing** administration page to setup the plugin.
 
 ### API Connection
 
