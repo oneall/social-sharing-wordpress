@@ -3,7 +3,7 @@
  * Plugin Name: Sharing Icons &amp; Share Buttons 
  * Plugin URI: http://www.oneall.com/ 
  * Description: Easy to use and 100% FREE Social Sharing Icons &amp; Share buttons for WordPress to allow people to share your posts and pages to 30+ social networks.
- * Version: 2.0 
+ * Version: 2.1 
  * Author: Damien Zara, OneAll.com
  * Author URI: http://www.oneall.com/ 
  * License: GPL-2.0+ 

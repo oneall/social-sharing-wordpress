@@ -1,30 +1,30 @@
-=== Social Sharing Icons &amp; Share Buttons ===
+=== Share Buttons &amp; Social Sharing Icons ===
 Contributors: Damien Zara, OneAll.com
-Tags: social sharing, social share, sharing icons, share icons, sharing buttons, share buttons, sharing plugin, share plugin, facebook share, facebook likes, floating share buttons, linkedin share, google share, twitter share, tweet button, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, icons, plugin, widget, shortcode
+Tags: social sharing, social share, sharing icons, share icons, sharing buttons, share buttons, simple share buttons, social sharing icons, sharing plugin, share plugin, share, sharing, icons, buttons, social, social share icons, social share buttons, facebook share, facebook likes, floating share buttons, linkedin share, google share, twitter share, tweet button, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, icons, plugin, widget, shortcode
 Requires at least: 3.0
 Tested up to: 4.4.2
 Stable tag: 2.1
  
-Easy to use and 100% FREE Social Sharing Icons &amp; Share buttons for WordPress to allow people to share your posts and pages to 30+ social networks. 
+Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress. Let your users share your posts and pages to 30+ Social Networks!
 
 
 == Description ==
 
-Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress. The OneAll sharing plugin allows your users to share comments, 
-purchases, reviews and other activities directly from your WordPress blog to their friends on multiple social networks! Prompt users to share content 
-and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic to your website. 
+<strong>Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress.</strong> <br /><br />
+The OneAll social sharing plugin allows your users to share comments, purchases, reviews and other activities directly from your WordPress blog to their friends 
+on multiple social networks! <br /><br />
+Prompt users to share content and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic 
+to your website. The plugin <strong>supports Open Graph Tags</strong> for more effective and efficient sharing results! <br /> 
 
-The plugin fully supports the Open Graph Tags for more effective and efficient sharing results! 
 
-
-<strong>30+ Social Networks to Choose From</strong>
+<strong>30+ Social Networks To Choose From</strong>
 <ul>
-	<li>Choose from over 30 social sharing networks to display on your blog.</li> 
-	<li>Add and arrange the social networks to create a custom collection of sharing options for your visitors.</li>
-	<li>Choose whether to display the network names and/or the individual or total share counts.</li>
+	<li>Choose from 30+ social sharing networks to display on your blog.</li> 
+	<li>Add/arrange the social networks to create a custom collection of sharing options.</li>
+	<li>Choose whether to display the network names and/or the total share counts.</li>
 </ul>
  
-<strong>Sharing Icons &amp; Counters</strong>
+<strong>Social Sharing Icons &amp; Counters</strong>
 <ul>	
 	<li>Amazon</li>
 	<li>AOL</li>
@@ -55,7 +55,7 @@ The plugin fully supports the Open Graph Tags for more effective and efficient s
 	<li>Yahoo Mail</li>
 </ul>
 
-<strong>Sharing Buttons</strong>
+<strong>Social Sharing Buttons</strong>
 <ul>
 	<li>Facebook Like Button</li>
 	<li>Google +1 Button</li>
@@ -64,8 +64,9 @@ The plugin fully supports the Open Graph Tags for more effective and efficient s
 	<li>VKontakte Share Button</li>
 </ul>
 
-<strong>Easily Add Sharing Buttons to 10 Different Locations</strong>
-Add for example a floating sidebar which is a very common and effective way to add social sharing icons to any page on your WordPress blog. 
+<strong>Easily Add Your Social Sharing Buttons to 10 Different Locations!</strong><br />
+Add for example a floating sidebar which is a very common and effective way to add the social sharing icons &amp; buttons to any page on your WordPress blog. 
+
 Your can also place the sharing buttons either above the content area, below the content area, or in both locations. We have 
 included 10 different locations that can be enabled with a single mouse-click. Custom locations can be added by using shortcodes!
 
@@ -82,13 +83,13 @@ included 10 different locations that can be enabled with a single mouse-click. C
 	<li>WordPress Credits</li>
 </ul> 
 
-<strong>Embed the Social Sharing icons as widget</strong>
+<strong>Embed the Social Sharing Icons As Widget!</strong><br />
 Place the sharing icons and buttons in any Widget area or use a shortcode to add them to any area in your content.
 
-<strong>30+ Themes, Clean, Customizable Design</strong>
-Choose between 30+ themes with  different colors, styles and sizes. No matter which theme you choose to display, your social buttons will look great.
+<strong>30+ Themes, Clean &amp; Customizable Design!</strong><br />
+Choose between 30+ themes with  different colors, styles and sizes. No matter which theme you choose to display, your social buttons will always look great!
 
-<strong>Who are we?</strong>
+<strong>Who are we?</strong><br />
 Social Sharing is maintained by <a href="http://www.oneall.com">OneAll</a>, a technology company created in 2011 and offering a set of web-delivered
 tools and services for establishing and optimizing a site's connection with social networks and identity providers such as Facebook, Twitter, 
 Google, Yahoo!, LinkedIn, Paypal, Instagram amongst others.
@@ -168,6 +169,6 @@ http://support.oneall.com/forums/
 * JavaScript optimized
 
 = 2.1 =
+* Total Shares Counter Added
 * Flat Blocks Theme Added
-* Sharing Counters Added
-* Unnecessary JavaScript removed
+* Unnecessary JavaScript Removed

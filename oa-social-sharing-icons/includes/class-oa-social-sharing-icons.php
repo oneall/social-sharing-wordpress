@@ -100,8 +100,7 @@ class oa_social_sharing_icons
 		else
 		{
 			$plugin_public = new oa_social_sharing_icons_public ();
-			$this->loader->add_action ('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-			$this->loader->add_action ('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+			$this->loader->add_action ('wp_enqueue_style', $plugin_public, 'enqueue_styles', array(), $this->version);
 			$this->loader->add_action ('wp_head', $plugin_public, 'display_library_js');
 		}
 	}

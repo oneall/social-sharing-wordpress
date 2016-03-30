@@ -94,7 +94,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	 */
 	public function add_setup_link ($links, $file)
 	{
-		if ($file == 'oa-social-sharing-icons/oa-social-sharing-icons.php')
+		if ($file == 'social-sharing-icons/oa-social-sharing-icons.php')
 		{
 			array_unshift ($links, '<a href="admin.php?page=oa-social-sharing-icons_setup">' . __ ('Setup', 'oa-social-sharing-icons') . '</a>');
 		}
@@ -129,7 +129,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	{	
 		$positions = array(
 			"Default" => array(
-				"disabled" => __ ("Do not display", 'oa-social-sharing-icons'),
+				"disabled" => '',
 				"default" => __ ("Default Buttons", 'oa-social-sharing-icons') 
 			),
 			"Beveled Squares" => array(
