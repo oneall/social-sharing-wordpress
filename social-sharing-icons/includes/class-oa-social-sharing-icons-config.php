@@ -297,7 +297,7 @@ class oa_social_sharing_icons_config
 	/**
 	 * The current version of the plugin.
 	 */
-	public $plugin_version = '2.1';
+	public $plugin_version = '2.2';
 
 	/**
 	 * Returns the instance
