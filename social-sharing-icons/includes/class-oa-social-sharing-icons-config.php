@@ -297,7 +297,7 @@ class oa_social_sharing_icons_config
 	/**
 	 * The current version of the plugin.
 	 */
-	public $plugin_version = '2.2';
+	public $plugin_version = '2.3';
 
 	/**
 	 * Returns the instance
@@ -462,20 +462,34 @@ class oa_social_sharing_icons_config
 	/**
 	 * Return the positions setting
 	 */
-	public function get_positions ($reload = false)
+	public function get_positions ($reload = false, $enabled_only = false)
 	{
 		$settings = $this->get_settings ($reload);
+		
+		// Default
+		$positions = array();
 		
 		// Setup Positions		
 		if (isset ($settings ['positions']) && is_array ($settings ['positions']))
 		{
-			$positions = $settings ['positions'];	
+			// Only enabled positions
+			if ($enabled_only === true)
+			{
+				foreach ($settings ['positions'] AS $position => $flag)
+				{
+					if ($flag <> 'disabled')
+					{
+						$positions[$position] = $flag;
+					}
+				}
+			}
+			// All positions
+			else
+			{			
+				$positions = $settings ['positions'];
+			}	
 		}
-		else
-		{
-			$positions = array();
-		}
-		
+			
 		return $positions;
 	}
 

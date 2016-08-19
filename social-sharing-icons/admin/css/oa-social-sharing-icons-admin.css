@@ -61,9 +61,17 @@
 	overflow: hidden;
 }
 
+#oneall .oneall_box .oneall_box_description {
+	color: #666;
+	font-size: 17px;
+	line-height: 28px;
+	padding: 18px 0;
+}
+
 #oneall .oneall_box_title {
 	font-size: 16px;
 	font-weight: bold;
+	padding-bottom: 4px;
 }
 
 #oneall .oneall_box_title a {
@@ -86,8 +94,8 @@
 
 /* ============ HELP BOX */
 #oneall .oneall_box_help {
-	background-color: #fcf8e3;
-	border-color: #faebcc;
+	background-color: #f9f7e2;
+	border-color: #eddebf;
 	color: #8a6d3b;
 }
 
@@ -119,8 +127,39 @@
 #oneall .oneall_box_setup .oneall_buttons a {
 	color: #6c6c6c;
 	font-size: 16px;
-	height: 30px;
-	line-height: 30px;
+	height: 32px;
+	line-height: 31px;
+	padding:0 20px;
+	margin: 0 10px 1px;
+}
+
+/* ============ ACCOUNT BOX */
+#oneall .oneall_box_account {
+	background-color: #e2f3db;
+	border-color: #ccdfbc;
+	color: #31708f;
+}
+
+#oneall .oneall_box_account .oneall_box_contents {
+	border-color: #a3cfd8;
+}
+
+#oneall .oneall_box_account a {
+	color: #3e687b;
+	font-weight: bold;
+}
+
+#oneall .oneall_box_account .oneall_buttons{
+	margin: 0
+}
+
+#oneall .oneall_box_account .oneall_buttons a {
+	color: #6c6c6c;
+	font-size: 12px;
+	height: 32px;
+	line-height: 31px;
+	padding:0 20px;
+	margin: 0 10px 1px;
 }
 
 /* ============ UPDATED BOX */
@@ -128,6 +167,30 @@
 	background-color: #e2f3db;
 	border-color: #d1e4c1;
 	color: #3c763d;
+}
+
+/* ============ PLUGIN BOX */
+#oneall .oneall_box_plugin {
+	padding: 0;
+}
+
+#oneall .oneall_box_plugin .oneall_box_title {
+	background-color: #31708f;
+	border-bottom: 1px solid #eee;
+	color: #fff;
+	line-height: 20px;
+	padding: 8px 15px;
+	text-shadow: 0 1px 0 #333
+}
+
+#oneall .oneall_box_plugin .oneall_box_contents {
+	border: 0 none;
+}
+
+#oneall .oneall_box_plugin .button-primary {
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color: #fff;
 }
 
 /* ============ CONFIG BOX */
@@ -157,6 +220,13 @@
 /* ============ TEASER BOX */
 #oneall .oneall_box_teaser {
 	padding: 0;
+}
+
+#oneall .oneall_teaser_title {
+	color: #777;
+	font-size: 27px;
+	padding: 20px 0;
+	text-align: center;
 }
 
 #oneall .oneall_box_teaser .oneall_box_title {
@@ -192,20 +262,28 @@
 	padding: 0 15px;
 }
 
+#oneall .oneall_form_desc{
+	background-color: #eee;
+    color: #6e6e6e !important;
+    font-weight: bold;
+}
+
 #oneall .oneall_form_row {
 	width: 100%;
 	float: left;
 	margin-top: 10px;
 }
 
-#oneall .oneall_form_row.oneall_form_row_divided {
-	border-top: 2px solid #f3f3f3;
-	margin-top: 15px;
-	padding-top: 15px;
+#oneall .oneall_form_desc .oneall_form_row{
+	margin-bottom: 10px;
 }
 
 #oneall .oneall_form_row .oneall_form_col {
 	line-height: 28px;
+}
+
+#oneall .oneall_form_row_desc{
+	background-color: #eee;
 }
 
 #oneall .oneall_form_row label {
@@ -256,12 +334,12 @@
 
 #oneall select.oneall_form_field {
 	-moz-appearance: none;
-	background-image:
-		url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
 	background-position: right center;
 	background-repeat: no-repeat;
 	padding-right: 25px;
 	outline: 0 none !important;
+	font-size: 13px;
 }
 
 #oneall select.oneall_form_field:-moz-focusring {

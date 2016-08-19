@@ -25,11 +25,11 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			'function' => 'add_content_dynamic_sidebar_after' 
 		),
 		'header' => array(
-			'hook' => 'get_header',
+			'hook' => 'wp_head',
 			'function' => 'add_content_get_header' 
 		),
 		'footer' => array(
-			'hook' => 'get_footer',
+			'hook' => 'wp_footer',
 			'function' => 'add_content_get_footer' 
 		),
 		'end_post' => array(
@@ -41,11 +41,11 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			'function' => 'add_content_credits' 
 		),
 		'left_floating' => array(
-			'hook' => 'get_header',
+			'hook' => 'wp_footer',
 			'function' => 'add_content_floating_left' 
 		),
 		'right_floating' => array(
-			'hook' => 'get_header',
+			'hook' => 'wp_footer',
 			'function' => 'add_content_floating_right' 
 		), 
 		'comment_form_before' => array(
@@ -55,7 +55,9 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 		'comment_form_after' => array(
 			'hook' => 'comment_form_after',
 			'function' => 'add_content_comment_form_after'
-		)		
+		),
+		'shortcode' => array(
+		),
 	);
 
 	/**
@@ -90,16 +92,10 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 		// Load Configuration 
 		$oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 
-		// Enabled Positions
-		$enabled_positions = $oa_social_sharing_icons_config->get_positions();
-		
-		// For all positions
-		if (is_array ($enabled_positions) && count ($enabled_positions) > 0)
+		// Only display if the subdomain has been set
+		if (strlen ($oa_social_sharing_icons_config->get_api_subdomain()) > 0)
 		{
-			foreach ($this->positions_hooks AS $position_key => $position_data)
-			{
-				$this->positions [$position_key] = (!empty ($enabled_positions[$position_key]) ? $enabled_positions[$position_key] : 'disabled');
-			}
+			$this->positions = $oa_social_sharing_icons_config->get_positions(false, true);
 		}
 	}
 
@@ -108,13 +104,23 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	 */
 	public function add_hooks_all_positions ()
 	{
+		// No hooks for admin area
 		if (!is_admin ())
 		{
+			// Loop through positions
 			foreach ($this->positions as $position => $value)
 			{				
-				$hook = $this->positions_hooks [$position] ['hook'];
-				$function = $this->positions_hooks [$position] ['function'];				
-				add_action ($hook, array($this, $function));
+				// Check if we have a hook for it
+				if ( ! empty ($this->positions_hooks [$position]))
+				{
+					$position_hook = $this->positions_hooks [$position];
+					
+					// Add the action if we have one
+					if ( ! empty ($position_hook['hook']) && ! empty ($position_hook ['function']))
+					{							
+						add_action ($position_hook['hook'], array($this, $position_hook ['function']));
+					}
+				}
 			}
 		}
 	}
@@ -138,10 +144,26 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			$shortcode_html_id = 'custom';
 		}
 		
-		$button_size = !empty ($size) ? $size : (!empty ($atts ['size']) ? $atts ['size'] : oa_social_sharing_icons_config::getInstance()->get_default_size());
+		// Compute Button Design
+		if ( ! empty ($size))
+		{
+			$button_size = $size;
+		}
+		elseif (is_array ($atts) && ! empty ($atts ['size']))
+		{
+			$button_size = $atts ['size'];
+		}
+		elseif (is_array ($this->positions) && ! empty ($this->positions ['shortcode']))
+		{
+			$button_size = $this->positions ['shortcode'];
+		} 
+		else
+		{
+			$button_size = oa_social_sharing_icons_config::getInstance()->get_default_size();
+		}			
 		
-		// In posts, needed for the shortcode to be placed at the good place
-		if (is_single ())
+		// In posts and pages this is needed to place the shortcode output at the right place
+		if (is_single () || is_page())
 		{
 			ob_start ();
 			$this->add_content_custom ($shortcode_html_id, $button_size);
@@ -217,7 +239,7 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	public function add_content_credits ()
 	{
 		$size = $this->positions ['credits'];
-		echo '<span class="oneall_sharing_icons oneall_sharing_icons_credits">'. $this->print_sharing_block ('credits', $size) .'</span>';
+		echo '<div class="oneall_sharing_icons oneall_sharing_icons_credits">'. $this->print_sharing_block ('credits', $size) .'</div>';
 	}
 
 	/**
@@ -294,7 +316,23 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 				
 				foreach ($enabled_methods as $method_data)
 				{
-					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method_data['name_key'] . '" title="' . str_replace ('%provider.name%', $method_data['name'], $button_text) . '"></span>';
+					switch ($method_data['name_key'])
+					{
+						case 'counter':
+							$social_sharing_block_title = '';
+							break;
+							
+						case 'email':
+							$social_sharing_block_title = $method_data['name'];
+						break;
+												
+						default:
+							$social_sharing_block_title = str_replace ('%provider.name%', $method_data['name'], $button_text);
+						break;
+							
+					}					
+					
+					$social_sharing_block .= '<span class="oas_btn oas_btn_' . $method_data['name_key'] . '" title="' . $social_sharing_block_title . '"></span>';
 				}
 				
 				$social_sharing_block .= '</span>';

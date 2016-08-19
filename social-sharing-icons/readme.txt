@@ -2,15 +2,15 @@
 Contributors: Damien Zara, OneAll.com
 Tags: social sharing, social share, sharing icons, share icons, sharing buttons, share buttons, simple share buttons, social sharing icons, sharing plugin, share plugin, share, sharing, icons, buttons, social, social share icons, social share buttons, facebook share, facebook likes, floating share buttons, linkedin share, google share, twitter share, tweet button, delicious, digg, stumleupon, tumblr, vkontakte, pinterest, icons, plugin, widget, shortcode
 Requires at least: 3.0
-Tested up to: 4.4.2
-Stable tag: 2.2
+Tested up to: 4.6
+Stable tag: 2.3
  
-Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress. Let your users share your posts and pages to 30+ Social Networks!
+Social Sharing Icons, Share Buttons and Counters for your WordPress blog. 30+ social networks and 20+ button themes to choose from.
 
 
 == Description ==
 
-<strong>Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress.</strong> <br /><br />
+<strong>Easy to use and 100% FREE Social Sharing Icons &amp; Share Buttons for WordPress. 30+ Social Networks and 20+ button themes to choose from.</strong> <br /><br />
 The OneAll social sharing plugin allows your users to share comments, purchases, reviews and other activities directly from your WordPress blog to their friends 
 on multiple social networks! <br /><br />
 Prompt users to share content and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic 
@@ -157,8 +157,24 @@ http://support.oneall.com/forums/
 
 == Changelog ==
 
-= 1.0 =
-* Initial release
+= 2.3 =
+* Subdomain inherited from Social Login
+* More page added
+* Link to statistics added
+* Public CSS enqueue fixed
+* Floating buttons CSS fixed
+* Default button positions added
+
+= 2.2 =
+* Bugfix for add_action call
+* Undefined index bug fixed
+* Shortcode for pages added
+* Shortcode design selection added
+
+= 2.1 =
+* Total Shares Counter Added
+* Flat Blocks Theme Added
+* Unnecessary JavaScript Removed
 
 = 2.0 =
 * 20+ new social networks
@@ -168,11 +184,5 @@ http://support.oneall.com/forums/
 * Screenshots added
 * JavaScript optimized
 
-= 2.1 =
-* Total Shares Counter Added
-* Flat Blocks Theme Added
-* Unnecessary JavaScript Removed
-
-= 2.2 =
-* Bugfix for add_action call
-
+= 1.0 =
+* Initial release

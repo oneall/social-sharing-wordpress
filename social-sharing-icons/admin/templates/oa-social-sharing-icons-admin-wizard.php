@@ -12,27 +12,16 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 ?>
 <div class="wrap">
 	<div id="oneall">
-		<h2>OneAll Social Sharing Icons <?php echo $this->version; ?></h2>
-	
-		<div class="oneall_box oneall_box_help">
-			<div class="oneall_box_title">
-				<?php _e ('Information', 'oa-social-sharing-icons'); ?>
-			</div>
+		<h2>OneAll Social Sharing Icons <?php echo $this->version; ?></h2>		
+		<div class="oneall_box oneall_box_account">
 			<div class="oneall_box_contents">
-				<ul>
-					<li>
-						<?php printf (__ ('<a target="_blank" href="%s">Follow us on Twitter</a> to stay informed about updates', 'oa-social-sharing-icons'), 'http://www.twitter.com/oneall'); ?>;
-					</li>
-					<li>
-						<?php printf (__ ('Feel free to <a target="_blank" href="%s">get in touch</a> if you have any questions', 'oa-social-sharing-icons'), 'http://support.oneall.com/forums/'); ?>;
-					</li>
-					<li>
-						<?php printf (__ ('Let your visitors comment, login and register with 30+ Social Networks with our <a target="_blank" href="%s">Social Login plugin</a>!', 'oa-social-sharing-icons'), 'https://wordpress.org/plugins/oa-social-login/'); ?>
-					</li>
-				</ul>
+				<p class="oneall_buttons">
+					<a class="button-secondary" href="https://app.oneall.com/signin/" target="_blank"><?php _e ('Access my OneAll Account', 'oa-social-sharing-icons'); ?></a>
+					<a class="button-secondary" href="https://app.oneall.com/insights/sharing/" target="_blank"><?php _e ('View my Sharing Insights', 'oa-social-sharing-icons'); ?></a>
+				</p>
 			</div>
 		</div>
-		
+			
 		<?php 
 			// Settings Updated
 			if (!empty ($_REQUEST ['settings-updated']) AND strtolower ($_REQUEST ['settings-updated']) == 'true')
@@ -53,10 +42,9 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 			?>
 			<div class="oneall_box oneall_box_config">
 				<div class="oneall_box_title">
-					<?php _e ('Enter you OneAll subdomain', 'oa-social-sharing-icons'); ?>
+					<?php _e ('OneAll Config', 'oa-social-sharing-icons'); ?>
 					<span class="oneall_pull_right">
-						<a href="https://app.oneall.com/applications/" target="_blank"><?php _e ('View My API Credentials', 'oa_social_login'); ?></a> |
-						<a href="https://app.oneall.com/insights/sharing/" target="_blank"><?php _e ('View My Sharing Statistics', 'oa_social_login'); ?></a>
+						<a href="https://app.oneall.com/applications/" target="_blank"><?php _e ('View My API Credentials', 'oa_social_login'); ?></a>
 					</span>
 				</div>
 				<div class="oneall_box_contents">
@@ -72,6 +60,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								<input type="text" class="oneall_form_field" id="oa_social_sharing_icons_settings_api_subdomain" name="oa_social_sharing_icons_settings[api_subdomain]" size="65" value="<?php echo htmlspecialchars ($oneall_api_subdomain); ?>" />
+								<p class="description"><?php _e ('You can find the subdomain in the API Settings of your site in your OneAll account.', 'oa-social-sharing-icons') ?></p>
 							</div>								
 						</div>
 					</div>		
@@ -79,7 +68,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 			</div>				
 			<div class="oneall_box oneall_box_config">
 				<div class="oneall_box_title">
-					<?php _e ('Setup your sharing icons', 'oa-social-sharing-icons'); ?>
+					<?php _e ('Sharing Icons Config', 'oa-social-sharing-icons'); ?>
 				</div>
 				<div class="oneall_box_contents">
 					<div class="oneall_form">
@@ -97,7 +86,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 									<option value="0"<?php echo (empty ($oneall_disable_og_tags) ? ' selected="selected"' :'');?>><?php _e ('Use Open Graph tags when sharing content'); ?></option>
 									<option value="1"<?php echo ( ! empty ($oneall_disable_og_tags) ? ' selected="selected"' :'');?>><?php _e ('Do not use Open Graph tags when sharing content'); ?></option>																			
 								</select>
-								<span class="oneall_form_note"><?php _e ('If enabled, the <a href="https://developers.facebook.com/docs/sharing/webmasters" target="_blank">Open Graph</a> tags of your blog will be used when sharing content.', 'oa-social-sharing-icons');?></span>
+								<p class="description"><?php _e ('If enabled, the <a href="https://developers.facebook.com/docs/sharing/webmasters" target="_blank">Open Graph</a> tags of your blog will be used when sharing content.', 'oa-social-sharing-icons');?></p>
 							</div>
 						</div>						
 						<div class="oneall_form_row">
@@ -111,7 +100,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								<input type="text" class="oneall_form_field" id="oa_social_sharing_icons_settings_button_text" name="oa_social_sharing_icons_settings[button_text]" size="65" value="<?php echo htmlspecialchars ($oneall_button_text); ?>" />								
-								<span class="oneall_form_note"><?php _e ('<strong>%provider.name%</strong> is automatically replaced by the name of the social network.', 'oa-social-sharing-icons');?></span>
+								<p class="description"><?php _e ('<strong>%provider.name%</strong> is automatically replaced by the name of the social network.', 'oa-social-sharing-icons');?></p>
 							</div>
 						</div>	
 						<div class="oneall_form_row">
@@ -127,7 +116,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 								<select class="oneall_form_field" id="oa_social_sharing_icons_settings_default_size" name="oa_social_sharing_icons_settings[default_size]">
 									<?php echo oa_social_sharing_icons_admin::print_select_position_options(false, 'default_size', array ('default_size' => $oneall_default_size)); ?>											
 								</select>
-								<span class="oneall_form_note"><?php _e ('This is the default design used to display the sharing icons.', 'oa-social-sharing-icons');?></span>
+								<p class="description"><?php _e ('This is the default design used to display the icons. The selected design is visible in the preview below.', 'oa-social-sharing-icons');?></p>
 							</div>
 						</div>		
 						<div class="oneall_form_row">
@@ -182,12 +171,22 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 			<div class="oneall_box oneall_box_config">
 				<div class="oneall_box_title">
 					<?php 
-						_e ('Choose where to display the sharing icons', 'oa-social-sharing-icons'); 
+						_e ('Sharing Icons Locations', 'oa-social-sharing-icons'); 
 						$oneall_positions = $oa_social_sharing_icons_config->get_positions();
 					?>
 				</div>
 				<div class="oneall_box_contents">
-					<div class="oneall_form">
+					<div class="oneall_form oneall_form_desc">
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<?php _e ('Blog Position', 'oa-social-sharing-icons'); ?>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<?php _e ('Select a button style or leave the field empty to hide the buttons.', 'oa-social-sharing-icons'); ?>
+							</div>
+						</div>
+					</div>				
+					<div class="oneall_form">						
 						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
 								<label for="position_left_floating"><?php _e ('Floating Left (All pages)', 'oa-social-sharing-icons'); ?></label>
@@ -291,6 +290,35 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 					</div>
 				</div>
 			</div>
+			
+			<div class="oneall_box oneall_box_config">
+				<div class="oneall_box_title">
+					<?php 
+						_e ('Embed the icons using a shortcode', 'oa-social-sharing-icons'); 
+						$oneall_positions = $oa_social_sharing_icons_config->get_positions();
+					?>
+				</div>
+				<div class="oneall_box_contents">
+					<div class="oneall_form">
+						<div class="oneall_form_row">
+						<?php 
+							_e('You can embed the sharing icons by adding the code <code>[oa_social_sharing_icons]</code> to a post or page. Below you can select the design that should be used for icons embedded using the shortcode.');
+						?>
+						</div>
+						<div class="oneall_form_row oneall_form_row_divided">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_left_floating"><?php _e ('Shortcode Icons Design', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								 <select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][shortcode]" id="position_shortcode">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(false, 'shortcode', $oneall_positions); ?>
+								 </select>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			
 			<div class="oneall_form">
 				<div class="oneall_form_row oneall_form_row_buttons">
 					<input type="hidden" id="oneall_enabled_methods" name="oa_social_sharing_icons_settings[enabled_methods]">

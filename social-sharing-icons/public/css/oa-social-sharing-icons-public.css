@@ -1,20 +1,36 @@
 .oneall_sharing_icons_floating {
-    background-color: #E9E9E9;
+    background-color: #eee;
     position: fixed;
-	top: 30%;
+	top: 20%;
 	z-index: 99999;
 	padding: 5px;
 	margin: 0 auto;
 }
 
-.oneall_sharing_icons_floating_left {
+.oneall_sharing_icons_floating.oneall_sharing_icons_floating_left {
     left: 0;
 	border-radius: 0 3px 3px 0;
 }
 
-.oneall_sharing_icons_floating_right {
+.oneall_sharing_icons_floating.oneall_sharing_icons_floating_right {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+
+.oneall_sharing_icons_floating .oas_btn_counter{
+	width: 100%;
+}
+
+.oneall_sharing_icons_floating .oas_btn_counter .oas_btn_brd{
+	text-align:center;
+}
+
+.oneall_sharing_icons_floating .oas_btn_counter .oas_btn_brd .oas_btn_txt{
+	padding:0 !important;
+}
+
+.oneall_sharing_icons_floating .oas_btn_counter .oas_btn_counter_text{
+	display:none;
 }
 
 .oneall_sharing_icons_floating .oas_btn {

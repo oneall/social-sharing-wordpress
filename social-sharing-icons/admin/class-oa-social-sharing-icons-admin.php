@@ -81,11 +81,24 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 	 */
 	public function add_admin_page ()
 	{
+		//Setup
 		$page = add_menu_page ('OneAll Social Sharing ' . __ ('Setup', 'oa-social-sharing-icons'), 'Social Sharing', 'manage_options', $this->plugin_name . '_setup', array($this, 'load_admin_setup_content'), 'dashicons-share');
-		add_action ('admin_print_styles-' . $page, array ($this, 'display_library_js'));		
-		add_action ('admin_init', array ($this, 'register_settings'));
+		add_action ('admin_print_styles-' . $page, array ($this, 'display_library_js'));
 		add_action ('load-' . $page, array ($this, 'enqueue_styles'));
-		add_action ('load-' . $page, array ($this, 'enqueue_scripts'));		
+		add_action ('load-' . $page, array ($this, 'enqueue_scripts'));
+		
+		//More
+		$page = add_submenu_page ($this->plugin_name . '_setup', 'OneAll Social Sharing ' . __ ('+More'), __ ('+More'), 'manage_options',  $this->plugin_name . '_more', array($this, 'load_admin_more_content'));
+		add_action ('load-' . $page, array ($this, 'enqueue_styles'));
+		
+		//Fix Setup title
+		global $submenu;
+		if (is_array ($submenu) AND isset ($submenu [$this->plugin_name . '_setup']))
+		{
+			$submenu [$this->plugin_name . '_setup'] [0] [0] = __ ('Setup', 'oa_social_login');
+		}		
+				
+		add_action ('admin_init', array ($this, 'register_settings'));	
 	}
 
 	
@@ -100,6 +113,14 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		}
 		
 		return $links;
+	}
+	
+	/**
+	 * Load the plugin more page template.
+	 */
+	public function load_admin_more_content ()
+	{
+		require_once plugin_dir_path (__FILE__) . 'templates/oa-social-sharing-icons-admin-more.php';		
 	}
 
 	/**
@@ -130,7 +151,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		$positions = array(
 			"Default" => array(
 				"disabled" => '',
-				"default" => __ ("Default Buttons", 'oa-social-sharing-icons') 
+				"default" => __ ("Default Button Design", 'oa-social-sharing-icons') 
 			),
 			"Beveled Squares" => array(
 				"btns_s" => __ ("Beveled Squares (Small, Colored)", 'oa-social-sharing-icons'),
@@ -194,9 +215,7 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		
 		$html_options = '';
 		foreach ($positions as $group_name => $group)
-		{
-			if (!($group_name == 'Default' && !$disabled_allowed))
-			{
+		{		
 				if ($group_name <> 'Default')
 				{
 					$html_options .= '<optgroup label="' . $group_name . '">';
@@ -204,18 +223,22 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 				
 				foreach ($group as $value => $wording)
 				{
-					// Should this option be selected?
-					$selected = (((is_array ($options) && !empty ($option) && isset ($options [$option]) && $options [$option] == $value)) ? true : false);
+					// Either nor disabled, or disabling allowed
+					if (strtolower ($value) <> 'disabled' || $disabled_allowed)
+					{					
+						// Should this option be selected?
+						$selected = (((is_array ($options) && !empty ($option) && isset ($options [$option]) && $options [$option] == $value)) ? true : false);
 					
-					// Add Option
-					$html_options .= '<option value="' . $value . '"' . ($selected ? ' selected="selected"' : '') . '>' . $wording . '</option>';
+						// Add Option
+						$html_options .= '<option value="' . $value . '"' . ($selected ? ' selected="selected"' : '') . '>' . $wording . '</option>';
+					}
 				}
 				
 				if ($group_name <> 'Default')
 				{
 					$html_options .= '</optgroup>';
 				}
-			}
+			
 		}
 		
 		return $html_options;
@@ -304,6 +327,18 @@ class oa_social_sharing_icons_admin extends oa_social_sharing_icons
 		if (isset ($settings ['positions']) && is_array ($settings ['positions']))
 		{
 			$sanitized_settings ['positions'] = $settings ['positions'];
+		}
+		else
+		{
+			// Default Positions
+			if ( ! empty ($_REQUEST['page']) && $_REQUEST['page'] == 'setup')
+			{
+				$sanitized_settings ['positions'] = array(
+					'left_floating' => 'default', 
+					'end_post' => 'default', 
+					'comment_form_after' => 'default'
+				);
+			}
 		}
 			
 		// Done
