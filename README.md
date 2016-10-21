@@ -6,7 +6,7 @@ blog to their friends on multiple social networks!
 Prompt users to share content and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic to your website. 
 The plugin supports Open Graph Tags for more effective and efficient sharing results!
 
-# LoudVoice
+## Plugin Installation
 * Upload the folder **social-sharing-icons** to the **/wp-content/plugins/** directory of your WordPress site,
 * Activate the plugin through the **Plugins** menu in WordPress administration area,
 * Navigate to the **Social Sharing** administration page to setup the plugin.
