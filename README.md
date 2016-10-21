@@ -1,3 +1,4 @@
+# Social Sharing Icons
 Easy to use and 100% FREE Social Sharing Icons & Share Buttons for WordPress. 30+ Social Networks and 20+ button themes to choose from.
 The OneAll social sharing plugin allows your users to share comments, purchases, reviews and other activities directly from your WordPress 
 blog to their friends on multiple social networks!
@@ -5,15 +6,17 @@ blog to their friends on multiple social networks!
 Prompt users to share content and activities at the right moment and drive high-quality and high-volume word-of-mouth traffic to your website. 
 The plugin supports Open Graph Tags for more effective and efficient sharing results!
 
-### Plugin Installation
-
+# LoudVoice
 * Upload the folder **social-sharing-icons** to the **/wp-content/plugins/** directory of your WordPress site,
 * Activate the plugin through the **Plugins** menu in WordPress administration area,
 * Navigate to the **Social Sharing** administration page to setup the plugin.
 
 
-### Social Sharing Icons & Counters
+## Official WordPress plugin
+https://wordpress.org/plugins/social-sharing-icons/
 
+
+## Social Sharing Icons & Counters
 * Amazon
 * AOL
 * Baidu
@@ -43,8 +46,7 @@ The plugin supports Open Graph Tags for more effective and efficient sharing res
 * Yahoo Mail
 
 
-###  Social Sharing Buttons
-
+##  Social Sharing Buttons
 * Facebook Like Button
 * Google +1 Button
 * LinkedIn Share Button
@@ -52,9 +54,8 @@ The plugin supports Open Graph Tags for more effective and efficient sharing res
 * VKontakte Share Button
 
 
-### API Connection
+## About Us
+The social sharing icons are maintained by [OneAll](http://www.oneall.com/). OneAll, a technology company offering a set of 
+web-delivered tools and services for establishing and optimizing a site's connection with social networks.
 
-The social network APIs are constantly changing and being updated. We monitor these changes and automatically update our APIs, 
-so that you can be sure that Social Sharing Icons will always run smoothly and with the most up-to-date API calls.
-
-In order to enable the plugin you must connect with the OneAll API and create a free account at https://app.oneall.com
+**Fork us on Github!**
