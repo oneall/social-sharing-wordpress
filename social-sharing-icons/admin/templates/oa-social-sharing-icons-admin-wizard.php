@@ -179,17 +179,18 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 					<div class="oneall_form oneall_form_desc">
 						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
-								<?php _e ('Blog Position', 'oa-social-sharing-icons'); ?>
+								<?php _e ('Location', 'oa-social-sharing-icons'); ?>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
-								<?php _e ('Select a button style or leave the field empty to hide the buttons.', 'oa-social-sharing-icons'); ?>
+								<?php _e ('Select a button style or leave the corresponding field empty to disable the buttons.', 'oa-social-sharing-icons'); ?>
 							</div>
 						</div>
 					</div>				
 					<div class="oneall_form">						
-						<div class="oneall_form_row">
+						<div class="oneall_form_row">				
+							
 							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_left_floating"><?php _e ('Floating Left (All pages)', 'oa-social-sharing-icons'); ?></label>
+								<label for="position_left_floating"><?php _e ('All Pages \ Floating Left', 'oa-social-sharing-icons'); ?></label>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								 <select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][left_floating]" id="position_left_floating">
@@ -197,69 +198,19 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 								 </select>
 							</div>
 						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
+						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_right_floating"><?php _e ('Floating Right (All pages)', 'oa-social-sharing-icons'); ?></label>
+								<label for="position_right_floating"><?php _e ('All Pages \ Floating Right', 'oa-social-sharing-icons'); ?></label>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								 <select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][right_floating]" id="position_right_floating">
 									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'right_floating', $oneall_positions); ?>
 								 </select>
 							</div>
-						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
-							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_header"><?php _e ('Blog Header', 'oa-social-sharing-icons'); ?></label>
-							</div>
-							<div class="oneall_form_col oneall_form_col_70">
-								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][header]" id="position_header">
-									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'header', $oneall_positions); ?>
-								 </select>
-							</div>
-						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
-							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_footer"><?php _e ('Blog Footer', 'oa-social-sharing-icons'); ?></label>
-							</div>
-							<div class="oneall_form_col oneall_form_col_70">
-								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][footer]" id="position_footer">
-									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'footer', $oneall_positions); ?>
-								 </select>
-							</div>
-						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
-							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_end_post"><?php _e ('After Each Post', 'oa-social-sharing-icons'); ?></label>
-							</div>
-							<div class="oneall_form_col oneall_form_col_70">
-								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][end_post]" id="position_end_post">
-									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'end_post', $oneall_positions); ?>
-								</select>
-							</div>
-						</div>						
-						<div class="oneall_form_row oneall_form_row_divided">
-							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_comment_form_before"><?php _e ('Above The Comments Form', 'oa-social-sharing-icons'); ?></label>
-							</div>
-							<div class="oneall_form_col oneall_form_col_70">
-								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][comment_form_before]" id="position_comment_form_before">
-									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'comment_form_before', $oneall_positions); ?>
-								</select>
-							</div>
-						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
-							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_comment_form_after"><?php _e ('Below The Comments Form', 'oa-social-sharing-icons'); ?></label>
-							</div>
-							<div class="oneall_form_col oneall_form_col_70">
-								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][comment_form_after]" id="position_comment_form_after">
-									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'comment_form_after', $oneall_positions); ?>
-								</select>
-							</div>
 						</div>					
-						<div class="oneall_form_row oneall_form_row_divided">
+						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_dynamic_sidebar_before"><?php _e ('Dynamic Sidebar Top', 'oa-social-sharing-icons'); ?></label>
+								<label for="position_dynamic_sidebar_before"><?php _e ('All Pages \ Sidebar Top', 'oa-social-sharing-icons'); ?></label>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][dynamic_sidebar_before]" id="position_dynamic_sidebar_before">
@@ -267,9 +218,9 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 								</select>
 							</div>
 						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
+						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_dynamic_sidebar_after"><?php _e ('Dynamic Sidebar Bottom', 'oa-social-sharing-icons'); ?></label>
+								<label for="position_dynamic_sidebar_after"><?php _e ('All Pages \ Sidebar Bottom', 'oa-social-sharing-icons'); ?></label>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][dynamic_sidebar_after]" id="position_dynamic_sidebar_after">
@@ -277,16 +228,89 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 				 				</select>
 							</div>
 						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
+						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
-								<label for="position_credits"><?php _e ('WordPress Credits', 'oa-social-sharing-icons'); ?></label>
+								<label for="position_header"><?php _e ('All Pages \ Blog Header', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][header]" id="position_header">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'header', $oneall_positions); ?>
+								 </select>
+							</div>
+						</div>
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_footer"><?php _e ('All Pages \ Blog Footer', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][footer]" id="position_footer">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'footer', $oneall_positions); ?>
+								 </select>
+							</div>
+						</div>	
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_credits"><?php _e ('All Pages \ Blog Credits', 'oa-social-sharing-icons'); ?></label>
 							</div>
 							<div class="oneall_form_col oneall_form_col_70">
 								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][credits]" id="position_credits">
 									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'credits', $oneall_positions); ?>
 				 				</select>
 							</div>
+						</div>		
+					</div>
+					<div class="oneall_form">				
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_before_post_title"><?php _e ('Single Post \ Above Title', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][before_post_title]" id="position_before_post_title">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'before_post_title', $oneall_positions); ?>
+								</select>
+							</div>
 						</div>
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_after_post_title"><?php _e ('Single Post \ Between Title And Text', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][after_post_title]" id="position_after_post_title">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'after_post_title', $oneall_positions); ?>
+								</select>
+							</div>
+						</div>		
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_end_post"><?php _e ('Single Post \ Below Text', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][end_post]" id="position_end_post">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'end_post', $oneall_positions); ?>
+								</select>
+							</div>
+						</div>							
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_comment_form_before"><?php _e ('Single Post \ Above Comments Form', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][comment_form_before]" id="position_comment_form_before">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'comment_form_before', $oneall_positions); ?>
+								</select>
+							</div>
+						</div>
+						<div class="oneall_form_row">
+							<div class="oneall_form_col oneall_form_col_30">
+								<label for="position_comment_form_after"><?php _e ('Single Post \ Below Comments Form', 'oa-social-sharing-icons'); ?></label>
+							</div>
+							<div class="oneall_form_col oneall_form_col_70">
+								<select class="oneall_form_field" name="oa_social_sharing_icons_settings[positions][comment_form_after]" id="position_comment_form_after">
+									<?php echo oa_social_sharing_icons_admin::print_select_position_options(true, 'comment_form_after', $oneall_positions); ?>
+								</select>
+							</div>
+						</div>				
+												
 					</div>
 				</div>
 			</div>
@@ -305,7 +329,7 @@ $oa_social_sharing_icons_config = oa_social_sharing_icons_config::getInstance();
 							_e('You can embed the sharing icons by adding the code <code>[oa_social_sharing_icons]</code> to a post or page. Below you can select the design that should be used for icons embedded using the shortcode.');
 						?>
 						</div>
-						<div class="oneall_form_row oneall_form_row_divided">
+						<div class="oneall_form_row">
 							<div class="oneall_form_col oneall_form_col_30">
 								<label for="position_left_floating"><?php _e ('Shortcode Icons Design', 'oa-social-sharing-icons'); ?></label>
 							</div>

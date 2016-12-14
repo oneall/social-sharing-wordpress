@@ -99,12 +99,9 @@ jQuery(document).ready(function($) {
 		
 		/* Button Text */
 		val = jQuery("#oa_social_sharing_icons_settings_button_text").val();	
-		if (typeof val === undefined || val.length === 0)
-		{
+		if (typeof val === undefined || val.length === 0) {
 			button_text = '%provider.name%';
-		}
-		else
-		{	
+		} else {	
 			button_text = val.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 		}
 		
@@ -115,16 +112,14 @@ jQuery(document).ready(function($) {
 		button_class = valid_layouts[0];
 		
 		val = jQuery('#oa_social_sharing_icons_settings_default_size').val();				
-		for (i = 0, j = valid_layouts.length; i < j; i = i + 1)
-		{
-			if (val === valid_layouts[i])
-			{
+		for (i = 0, j = valid_layouts.length; i < j; i = i + 1) {
+			if (val === valid_layouts[i]) {
 				button_class = val;
 			}				
 		}			
 		
 		/* Build code */	
-		html_code = '<div class="oas_box oas_box_' + button_class + '">';	
+		html_code = '<div class="oas_box oas_box_' + button_class + '" data-force-refresh="true">';	
 		
 		/* Selected Methods */	
 		jQuery('#oneall_sharing_methods_selected').children('.oneall_sharing_method').each(function() {	
@@ -136,18 +131,12 @@ jQuery(document).ready(function($) {
 			button_provider_name = jQuery(this).attr('data-name');	
 			
 			/* Button Text */
-			if (button_provider_key == 'email')
-			{
+			if (button_provider_key == 'email') {
 				button_provider_text = button_provider_name;
-			}
-			else
-			{
-				if (button_provider_key == 'counter')
-				{
+			} else {
+				if (button_provider_key == 'counter') {
 					button_provider_text = '';
-				}
-				else
-				{
+				} else {
 					button_provider_text = button_text;
 					button_provider_text = button_provider_text.replace ('%provider.name%', button_provider_name);
 				}

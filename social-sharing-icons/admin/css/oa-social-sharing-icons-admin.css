@@ -322,8 +322,23 @@
 	vertical-align: top;
 }
 
+#oneall .oneall_form_row .oneall_form_col_10 {
+	width: 10%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_20 {
+	width: 20%;
+	float: left;
+}
+
 #oneall .oneall_form_row .oneall_form_col_30 {
 	width: 30%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_40 {
+	width: 40%;
 	float: left;
 }
 
@@ -332,8 +347,28 @@
 	float: left;
 }
 
+#oneall .oneall_form_row .oneall_form_col_60 {
+	width: 60%;
+	float: left;
+}
+
 #oneall .oneall_form_row .oneall_form_col_70 {
 	width: 70%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_80 {
+	width: 80%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_90 {
+	width: 90%;
+	float: left;
+}
+
+#oneall .oneall_form_row .oneall_form_col_100 {
+	width: 100%;
 	float: left;
 }
 

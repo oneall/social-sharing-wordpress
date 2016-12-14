@@ -36,6 +36,14 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 			'hook' => 'the_content',
 			'function' => 'add_content_end_post' 
 		),
+		'before_post_title' => array(
+			'hook' => 'the_title',
+			'function' => 'add_content_before_post_title'
+		),
+		'after_post_title' => array(
+			'hook' => 'the_title',
+			'function' => 'add_content_after_post_title'
+		),
 		'credits' => array(
 			'hook' => '_credits',
 			'function' => 'add_content_credits' 
@@ -199,6 +207,42 @@ class oa_social_sharing_icons_public extends oa_social_sharing_icons
 	{
 		$size = $this->positions ['right_floating'];
 		echo '<div class="oneall_sharing_icons oneall_sharing_icons_floating oneall_sharing_icons_floating_right">'. $this->print_sharing_block ('right_floating', $size) . '</div>';
+	}
+	
+	/**
+	 * Position: After the title of a single post
+	 */
+	public function add_content_after_post_title ($title)
+	{
+		static $has_been_added = false;
+
+		// Only display on the main title of fully displayed posts
+		if (is_single() && in_the_loop() && $has_been_added == false)
+		{
+			$has_been_added = true;
+			$size = $this->positions ['after_post_title'];
+			return $title . '<div class="oneall_sharing_icons oneall_sharing_icons_post_title oneall_sharing_icons_after_post_title">' . $this->print_sharing_block ('after_post_title', $size) . '</div>';
+		}
+		
+		return $title;
+	}
+	
+	/**
+	 * Position: Before the title of a single post
+	 */
+	public function add_content_before_post_title ($title)
+	{
+		static $has_been_added = false;
+		
+		// Only display on the main title of fully displayed posts
+		if (is_single() && in_the_loop() && $has_been_added == false)
+		{
+			$has_been_added = true;
+			$size = $this->positions ['before_post_title'];
+			return '<div class="oneall_sharing_icons oneall_sharing_icons_post_title oneall_sharing_icons_before_post_title">' . $this->print_sharing_block ('before_post_title', $size) . '</div>' . $title;
+		}
+	
+		return $title;
 	}
 	
 	/**
