@@ -1,4 +1,4 @@
-# Social Sharing 1.0.0 for WordPress 3.0+
+# Social Sharing 2.5.0 for WordPress 3.0+
 Easy to use and 100% FREE Social Sharing Icons & Share Buttons for WordPress. 30+ Social Networks and 20+ button themes to choose from.
 The OneAll social sharing plugin allows your users to share comments, purchases, reviews and other activities directly from your WordPress 
 blog to their friends on multiple social networks!
