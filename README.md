@@ -1,4 +1,4 @@
-# Social Sharing Icons
+# Social Sharing 1.0.0 for WordPress 3.0+
 Easy to use and 100% FREE Social Sharing Icons & Share Buttons for WordPress. 30+ Social Networks and 20+ button themes to choose from.
 The OneAll social sharing plugin allows your users to share comments, purchases, reviews and other activities directly from your WordPress 
 blog to their friends on multiple social networks!
@@ -15,8 +15,7 @@ The plugin supports Open Graph Tags for more effective and efficient sharing res
 ## Official WordPress plugin
 https://wordpress.org/plugins/social-sharing-icons/
 
-
-## Social Sharing Icons & Counters
+## Supported Social Networks
 * Amazon
 * AOL
 * Baidu
@@ -28,21 +27,24 @@ https://wordpress.org/plugins/social-sharing-icons/
 * Email
 * Evernote
 * Facebook
-* Google Bookmarks
+* Flipboard
+* Google bookmarks
 * Google Plus
 * Hackernews
-* LinkedIn
-* Livejournal
+* Linkedin
+* LiveJournal
+* Mail.ru
 * Odnoklassniki
 * Pinterest
 * Pocket
 * Reddit
-* Renren
-* StumbleUpon
+* RenRen
+* Stumbleupon
 * Tumblr
 * Twitter
-* VKontakte
-* Sina Weibo
+* Vkontakte
+* Weibo
+* WhatsApp
 * Yahoo Mail
 
 
@@ -57,5 +59,8 @@ https://wordpress.org/plugins/social-sharing-icons/
 ## About Us
 The social sharing icons are maintained by [OneAll](http://www.oneall.com/). OneAll, a technology company offering a set of 
 web-delivered tools and services for establishing and optimizing a site's connection with social networks.
+
+## License
+The **GNU General Public License** (GPL) is available at http://www.gnu.org/licenses/old-licenses/gpl-2.0.html.
 
 **Fork us on Github!**

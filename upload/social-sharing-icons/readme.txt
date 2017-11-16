@@ -26,33 +26,36 @@ to your website. The plugin <strong>supports Open Graph Tags</strong> for more e
  
 <strong>Social Sharing Icons &amp; Counters</strong>
 <ul>	
-	<li>Amazon</li>
-	<li>AOL</li>
-	<li>Baidu</li>
-	<li>Blogger</li>
-	<li>Buffer</li>
-	<li>Delicious</li>
-	<li>Digg</li>
-	<li>Draugiem</li>
-	<li>Email</li>
-	<li>Evernote</li>
-	<li>Facebook</li>
-	<li>Google Bookmarks</li>
-	<li>Google Plus</li>
-	<li>Hackernews</li>
-	<li>LinkedIn</li>
-	<li>Livejournal</li>
-	<li>Odnoklassniki</li>
-	<li>Pinterest</li>
-	<li>Pocket</li>
-	<li>Reddit</li>
-	<li>Renren</li>
-	<li>StumbleUpon</li>
-	<li>Tumblr</li>
-	<li>Twitter</li>
-	<li>VKontakte</li>
-	<li>Sina Weibo</li>
-	<li>Yahoo Mail</li>
+	<li>Amazon</li> 
+	<li>AOL</li> 
+	<li>Baidu</li> 
+	<li>Blogger</li> 
+	<li>Buffer</li> 
+	<li>Delicious</li> 
+	<li>Digg</li> 
+	<li>Draugiem</li> 
+	<li>Email</li> 
+	<li>Evernote</li> 
+	<li>Facebook</li> 
+	<li>Flipboard</li> 
+	<li>Google bookmarks</li> 
+	<li>Google Plus</li> 
+	<li>Hackernews</li> 
+	<li>Linkedin</li> 
+	<li>LiveJournal</li> 
+	<li>Mail.ru</li> 
+	<li>Odnoklassniki</li> 
+	<li>Pinterest</li> 
+	<li>Pocket</li> 
+	<li>Reddit</li> 
+	<li>RenRen</li> 
+	<li>Stumbleupon</li> 
+	<li>Tumblr</li> 
+	<li>Twitter</li> 
+	<li>Vkontakte</li> 
+	<li>Weibo</li> 
+	<li>WhatsApp</li> 
+	<li>Yahoo Mail</li> 
 </ul>
 
 <strong>Social Sharing Buttons</strong>
